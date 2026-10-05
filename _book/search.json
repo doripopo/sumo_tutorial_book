@@ -20,23 +20,13 @@
     ]
   },
   {
-    "objectID": "summary.html",
-    "href": "summary.html",
-    "title": "12  SUMO 사용법 요약 및 파일 설명",
+    "objectID": "install.html",
+    "href": "install.html",
+    "title": "SUMO 환경 구성하기",
     "section": "",
-    "text": "12.1 SUMO 사용 순서",
+    "text": "본 장에서 SUMO 환경을 구성하는 법을 아래와 같이 설명하였습니다.\n\nvs code 설치\nminiconda 설치와 sumo python 환경 설정\nsumo 설치\n\n본래, SUMO만 설치하여도 시뮬레이션을 할 수 있습니다. 다만, SUMO 프로그램은 Python tool set을 제공하고 있어, 이를 이용하기 위해서는 python이 필요합니다. 또한, SUMO의 입력과 출력 파일은 기본적으로 xml 형식으로 이루어져 있습니다. 이 xml 파일을 메모장으로 편집할 수 있지만, vscode와 같은 편집기를 사용하면 보다 쉽게 편집하고, 볼 수 있습니다. 미래에 sumo를 응용하여 쓰게 될 때, python code 작성하거나, sumo python tool 프로그램 사용할 때, vscode가 도움이 될 수 있습니다.\n이에 vscode 설치 방법, miniconda 설치 방법을 함께 서술하였습니다. sumo만 필요한 경우, sumo 설치만 따라하셔도 괜찮습니다. 그리고 기존에 사용하시는 코드 편집기가 이미 존재하고, python도 설치되어 있다면, 해당 장을 생략하셔도 괜찮습니다.\n설치 방법을 간략하게 작성하였는데, 보다 상세한 가이드라인이 필요한 경우, 구글 검색창에 윈도우 vscdoe 설치와 같이 입력하시면 상세한 자료를 찾을 수 있습니다.\n순수 python의 경우, 버전관리, 앞으로 설치할 python, 환경변수 설정 등이 복잡한 부분이 있어 miniconda를 설치하는 것으로 안내드립니다. miniconda는 가상 환경을 만들어, python을 이용할 수 있어 파이썬 버전관리, python path 관리 등의 문제를 덜 겪을 수 있습니다.\n이와 별개로, 순수 python이 이미 설치되어 있고, python path가 설정되어 있다면, 이 miniconda를 설치하지 않으셔도 됩니다. 본 튜토리얼에서 sumo conda 환경을 활성화하는 부분을 빼고 python을 사용하는 부분을 따라하시면 되기 때문입니다.",
     "crumbs": [
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>요약</span>"
-    ]
-  },
-  {
-    "objectID": "references.html",
-    "href": "references.html",
-    "title": "References",
-    "section": "",
-    "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. (USA) 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
-    "crumbs": [
-      "References"
+      "SUMO 환경 구성하기"
     ]
   },
   {
@@ -48,16 +38,6 @@
     "crumbs": [
       "SUMO 환경 구성하기",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>VS CODE 설치 : 윈도우</span>"
-    ]
-  },
-  {
-    "objectID": "install.html",
-    "href": "install.html",
-    "title": "SUMO 환경 구성하기",
-    "section": "",
-    "text": "본 장에서 SUMO 환경을 구성하는 법을 아래와 같이 설명하였습니다.\n\nvs code 설치\nminiconda 설치와 sumo python 환경 설정\nsumo 설치\n\n본래, SUMO만 설치하여도 시뮬레이션을 할 수 있습니다. 다만, SUMO 프로그램은 Python tool set을 제공하고 있어, 이를 이용하기 위해서는 python이 필요합니다. 또한, SUMO의 입력과 출력 파일은 기본적으로 xml 형식으로 이루어져 있습니다. 이 xml 파일을 메모장으로 편집할 수 있지만, vscode와 같은 편집기를 사용하면 보다 쉽게 편집하고, 볼 수 있습니다. 미래에 sumo를 응용하여 쓰게 될 때, python code 작성하거나, sumo python tool 프로그램 사용할 때, vscode가 도움이 될 수 있습니다.\n이에 vscode 설치 방법, miniconda 설치 방법을 함께 서술하였습니다. sumo만 필요한 경우, sumo 설치만 따라하셔도 괜찮습니다. 그리고 기존에 사용하시는 코드 편집기가 이미 존재하고, python도 설치되어 있다면, 해당 장을 생략하셔도 괜찮습니다.\n설치 방법을 간략하게 작성하였는데, 보다 상세한 가이드라인이 필요한 경우, 구글 검색창에 윈도우 vscdoe 설치와 같이 입력하시면 상세한 자료를 찾을 수 있습니다.\n순수 python의 경우, 버전관리, 앞으로 설치할 python, 환경변수 설정 등이 복잡한 부분이 있어 miniconda를 설치하는 것으로 안내드립니다. miniconda는 가상 환경을 만들어, python을 이용할 수 있어 파이썬 버전관리, python path 관리 등의 문제를 덜 겪을 수 있습니다.\n이와 별개로, 순수 python이 이미 설치되어 있고, python path가 설정되어 있다면, 이 miniconda를 설치하지 않으셔도 됩니다. 본 튜토리얼에서 sumo conda 환경을 활성화하는 부분을 빼고 python을 사용하는 부분을 따라하시면 되기 때문입니다.",
-    "crumbs": [
-      "SUMO 환경 구성하기"
     ]
   },
   {
@@ -98,10 +78,32 @@
     "href": "install_sumo_in_window.html",
     "title": "4  SUMO 설치 : 윈도우",
     "section": "",
-    "text": "4.1 sumo 환경변수 설정\n명령어 입력\n환경변수 설정 1. sumo bin path를 환경변수로 설정해야합니다. 2. SUMO Path 환경변수 설정하기 3.내가 설치한 SUMO 폴더를 찾는다 4.SUMO 폴더에 들어간다 5.bin폴더에 들어간다. 6.폴더 바탕에서 오른쪽 키를 클릭한다 7.속성을 클릭한다 8.보안탭에 들어간다 9.개체 이름을 복사한다. 10. 복사한 값은 sumo bin 폴더의 path(주소)이다. 11. F:Files(자기 sumo&gt;bin 폴더의 주소값) 12. 윈도우키&gt;설정&gt;시스템&gt;정보&gt;고급시스템 설정 &gt;고급 Tab clik 1. 환경변수 클릭 2. Path 클릭 3. 편집 클릭 4. 새로만들기 클릭 5. 복사한 주소값 넣기 6. 적용 7. cmd 켜기 8. 작동확인 9. ppt에 나와있는대로 SUMO_HOME, Path에 sumo bin 구성되어 있는 지 확인 10. 안되면 sumo 삭제 후, 디폴트 상태로 재설치(환경변수 추가에 Check하여 설치) or 메일로 문의",
+    "text": "4.1 sumo 환경변수 설정\n명령어 입력\n환경변수 설정 1. sumo bin path를 환경변수로 설정해야합니다. 2. SUMO Path 환경변수 설정하기 3.내가 설치한 SUMO 폴더를 찾는다 4.SUMO 폴더에 들어간다 5.bin폴더에 들어간다. 6.폴더 바탕에서 오른쪽 키를 클릭한다 7.속성을 클릭한다 8.보안탭에 들어간다 9.개체 이름을 복사한다. 10. 복사한 값은 sumo bin 폴더의 path(주소)이다. 11. F:\\Program Files\\sumo\\bin(자기 sumo&gt;bin 폴더의 주소값) 12. 윈도우키&gt;설정&gt;시스템&gt;정보&gt;고급시스템 설정 &gt;고급 Tab clik 1. 환경변수 클릭 2. Path 클릭 3. 편집 클릭 4. 새로만들기 클릭 5. 복사한 주소값 넣기 6. 적용 7. cmd 켜기 8. 작동확인 9. ppt에 나와있는대로 SUMO_HOME, Path에 sumo bin 구성되어 있는 지 확인 10. 안되면 sumo 삭제 후, 디폴트 상태로 재설치(환경변수 추가에 Check하여 설치) or 메일로 문의",
     "crumbs": [
       "SUMO 환경 구성하기",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>SUMO 설치 : 윈도우</span>"
+    ]
+  },
+  {
+    "objectID": "SUMO mac OS building.html",
+    "href": "SUMO mac OS building.html",
+    "title": "5  MAC 설치",
+    "section": "",
+    "text": "5.0.1 git 설치, Homebrew 설치\nsumo mac build https://sumo.dlr.de/docs/Downloads.php#macos download sumo SUMO_HOME environment sumo lunchers download\n아래 블로그 링크 따라하기\nwiseah 블로그",
+    "crumbs": [
+      "SUMO 환경 구성하기",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>MAC 설치</span>"
+    ]
+  },
+  {
+    "objectID": "SUMO mac OS building.html#second",
+    "href": "SUMO mac OS building.html#second",
+    "title": "5  MAC 설치",
+    "section": "5.1 second",
+    "text": "5.1 second\n\n5.1.1 Hombrew install is recommended\n\nterminal 켜기 \n\ntermainal 순서대로 입력(복붙)\n/bin/bash -c \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)\"\nbrew update\nxcode-select --install\nclang --version\nbrew install cmake\nbrew install --cask xquartz\nbrew install xerces-c fox proj gdal gl2ps\nbrew install python ccache googletest fmt swig eigen apache-arrow pygobject3 gtk+3 adwaita-icon-theme python3 -m pip install texttest\ngit clone --recursive https://github.com/eclipse-sumo/sumo \nexport SUMO_HOME=\"$PWD/sumo\"\ncd $SUMO_HOME\ncmake -B build .\ncd $SUMO_HOME\ncmake --build build --parallel $(sysctl -n hw.ncpu)\nDownload SUMO lanchers",
+    "crumbs": [
+      "SUMO 환경 구성하기",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>MAC 설치</span>"
     ]
   },
   {
@@ -112,26 +114,6 @@
     "text": "프로젝트 폴더 생성\n간단한 네트워크 만들기와 통행 생성을 통해서 SUMO 시뮬레이션을 해보는 장입니다. 간단한 실습을 통해서 SUMO를 사용해보는 것이 목적입니다. 이 실습 장 이후에 SUMO 이론과 동작 순서를 설명하겠습니다. 이런 프로그램은 우선 일단 한 번 돌려보면, 사용 순서나 프로그램이 구현하고자 하는 개념을 쉽게 이해할 수 있는 것 같습니다.\n실습을 하기 이전에 프로젝트 폴더 만들기, Net Edit 프로그램 여는 법, Net Edit에서 네트워크 저장하는 법, VS CODE에서 프로젝트 폴더 여는 법, VS CODE에서 CMD 여는 법을 먼저 설명 드리겠습니다.\nSUMO 시뮬레이션을 위해서는 많은 입력 파일이 필요합니다. 한 개의 폴더에서 시뮬레이션 입력 파일을 관리하는 것이 오류를 찾고, 고치기에 더 쉽습니다. 그래서 하나의 시뮬레이션에 하나의 폴더를 만드는 것이 좋습니다.\n폴더 경로명에 한글이 있으면 오류가 생길 수 있습니다. 영문으로 된 경로에 시뮬레이션 프로젝트를 생성하는 것이 좋습니다. D:\\2026\\2026_sumo_tutorial\\basic_example과 같은 경로를 권장합니다.",
     "crumbs": [
       "SUMO 기초 실습"
-    ]
-  },
-  {
-    "objectID": "basic_example.html#network-그리기",
-    "href": "basic_example.html#network-그리기",
-    "title": "SUMO 기초 예제",
-    "section": "Network 그리기",
-    "text": "Network 그리기\n\nNet edit 기초 도구 설명\n 1. Inspect tool - 오브젝트 정보 보기 & 수정 - ID 수정 - Node - Edge 연결정보 수정 - 개체 속성값(최고 속도, 수단) 수정 등\n2. Delete tool - 오브젝트 삭제 3. Drawing tool - Edge 생성 4. Connection Tool - 좌우회전, 유턴 등 Edge의 차선 lane 간의 교차로 연결 정보 보기 및 수정 기능 5. Traffic Light tool - 교차로(Node)에 신호 정보 생성 - 신호 현시 설정 - 신호 간 offset 설정 6. Hide junction - Juntion(Node) 도형 숨기기, 표출하기 - Edg와 Node 간 연결이 이상할 때, 해당 기능을 이용하여 lane 간 연결을 볼 수 있다. 7. Edge Opposite Direction - 쌍방향 Edge를 한 번에 그릴 수 있다.\n그 외 도구 설명은 SUMO Documentation - Net Edit 참고 바랍니다.",
-    "crumbs": [
-      "SUMO 기초 예제"
-    ]
-  },
-  {
-    "objectID": "basic_example.html#network-그리기-1",
-    "href": "basic_example.html#network-그리기-1",
-    "title": "SUMO 기초 예제",
-    "section": "Network 그리기",
-    "text": "Network 그리기\n\nwindow 프로그램 창 열고, netedit 입력하여, network 편집기 켜기\n\nFile &gt; New Network 클릭\nFile &gt; Save Network As 클릭\n프로젝트 폴더 선택\n파일명으로 basic_net 입력 \n\nEdge Mode 클릭, Edge Opposite Direcition 클릭해서 아래 그림과 같이 그리기\n\n완성 그림 \n영상\n\n\n\n\nInspect Tool 이용하여, 각 EDGE의 ID를 그림과 같이 입력해줍니다.\n\n목표 그림 \n영상 예시",
-    "crumbs": [
-      "SUMO 기초 예제"
     ]
   },
   {
@@ -174,38 +156,6 @@
     "crumbs": [
       "SUMO 기초 실습",
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>신호 입력하기</span>"
-    ]
-  },
-  {
-    "objectID": "asked.html",
-    "href": "asked.html",
-    "title": "13  많이 묻는 질문",
-    "section": "",
-    "text": "13.1 커넥션 버튼\n편집 후 도로의 경우 Edge 사이에 흰 색 공백도 보여 도로가 제대로 연결되어 있는 것인지도 의아합니다.",
-    "crumbs": [
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>많이 묻는 질문</span>"
-    ]
-  },
-  {
-    "objectID": "SUMO mac OS building.html",
-    "href": "SUMO mac OS building.html",
-    "title": "5  MAC 설치",
-    "section": "",
-    "text": "5.0.1 git 설치, Homebrew 설치\nsumo mac build https://sumo.dlr.de/docs/Downloads.php#macos download sumo SUMO_HOME environment sumo lunchers download\n아래 블로그 링크 따라하기\nhttps://velog.io/(wiseah/Git?)-%EC%84%A4%EC%B9%98-%EB%B0%8F-%ED%99%98%EA%B2%BD%EC%84%A4%EC%A0%95mac-os",
-    "crumbs": [
-      "SUMO 환경 구성하기",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>MAC 설치</span>"
-    ]
-  },
-  {
-    "objectID": "SUMO mac OS building.html#second",
-    "href": "SUMO mac OS building.html#second",
-    "title": "5  MAC 설치",
-    "section": "5.1 second",
-    "text": "5.1 second\n\n5.1.1 Hombrew install is recommended\n\nterminal 켜기 \n\ntermainal 순서대로 입력(복붙)\n/bin/bash -c \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)\"\nbrew update\nxcode-select --install\nclang --version\nbrew install cmake\nbrew install --cask xquartz\nbrew install xerces-c fox proj gdal gl2ps\nbrew install python ccache googletest fmt swig eigen apache-arrow pygobject3 gtk+3 adwaita-icon-theme python3 -m pip install texttest\ngit clone --recursive https://github.com/eclipse-sumo/sumo \nexport SUMO_HOME=\"$PWD/sumo\"\ncd $SUMO_HOME\ncmake -B build .\ncd $SUMO_HOME\ncmake --build build --parallel $(sysctl -n hw.ncpu)\nDownload SUMO lanchers",
-    "crumbs": [
-      "SUMO 환경 구성하기",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>MAC 설치</span>"
     ]
   },
   {
@@ -296,9 +246,19 @@
     ]
   },
   {
+    "objectID": "summary.html",
+    "href": "summary.html",
+    "title": "12  요약",
+    "section": "",
+    "text": "12.1 SUMO 사용 순서",
+    "crumbs": [
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>요약</span>"
+    ]
+  },
+  {
     "objectID": "summary.html#sumo-사용-순서",
     "href": "summary.html#sumo-사용-순서",
-    "title": "12  SUMO 사용법 요약 및 파일 설명",
+    "title": "12  요약",
     "section": "",
     "text": "교통 공급(Supply) 정의 교통 인프라 공급을 정의하는 것\n\n\nNetwork 파일 만들기\n\n도로 Edge 속성 설정\n\n차선 수\n허용 교통 수단\n최고 속도 등\n\n교차로 설정\n신호 설정 등\n\n\n\n교통 수요(Demand) 정의 교통 수요를 정의하는 것, TAZ와 OD 기반으로 정의할 수 있다.\n\n\nTAZ 파일 작성\n\nTAZ에 속한 edge 작성, sink, source 구분\n\nOD matrix 작성\n\nTAZ를 단위로 od matrix 작성\n시작시각, 종료시각 입력\n\nod2trips로 OD matrix에 따른 통행 생성\n\nod2trips config 파일\n\n\nduarouter로 통행에 경로 배정\n\nduarouter config 파일\n\n\n\n시뮬레이션 sumo 실행\n\n\nsumo config 파일 작성\n시뮬레이션 실행\n결과 파일 확인",
     "crumbs": [
@@ -308,11 +268,21 @@
   {
     "objectID": "summary.html#요약",
     "href": "summary.html#요약",
-    "title": "12  SUMO 사용법 요약 및 파일 설명",
+    "title": "12  요약",
     "section": "12.2 요약",
     "text": "12.2 요약\n하기 그림에 나타난 duarcfg_file은 기초 실습의 duarouter config 파일이며, od2trips.config 또한 기초 실습의 od2trip의 config 파일입니다. additional.xml은 금번 기초실습에서 sumo config파일에 합쳐서 서술하였습니다.",
     "crumbs": [
       "<span class='chapter-number'>12</span>  <span class='chapter-title'>요약</span>"
+    ]
+  },
+  {
+    "objectID": "asked.html",
+    "href": "asked.html",
+    "title": "13  많이 묻는 질문",
+    "section": "",
+    "text": "13.1 커넥션 버튼\n편집 후 도로의 경우 Edge 사이에 흰 색 공백도 보여 도로가 제대로 연결되어 있는 것인지도 의아합니다.",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>많이 묻는 질문</span>"
     ]
   },
   {
