@@ -34,7 +34,7 @@ sumo --version
 8.보안탭에 들어간다
 9.개체 이름을 복사한다.
 10. 복사한 값은 sumo bin 폴더의 path(주소)이다.
-11. F:\Program Files\sumo\bin(자기 sumo>bin 폴더의 주소값)
+11. `F:\Program Files\sumo\bin`(자기 sumo>bin 폴더의 주소값)
 12. 윈도우키>설정>시스템>정보>고급시스템 설정
 >고급 Tab clik
 1.  환경변수 클릭
