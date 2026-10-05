@@ -1,0 +1,308 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "SUMO Tutorial",
+    "section": "",
+    "text": "Preface\n본 튜토리얼은 2026년 한양대학교에서 고준호 교수님이 강의하시는 교통공학 수업 중 SUMO 실습을 위해 작성되었습니다.\n이 튜토리얼의 목적은 아래와 같습니다.\n\nSUMO 설치하기\nSUMO 프로그램의 python tool을 사용하기 위해 ANACONDA와 Python 설치하기\nSUMO input, output 파일을 편집하기 위한 vscode 설치\n간단한 교통 네트워크를 시뮬레이션 하여 SUMO 동작 방법 이해하기\nSUMO python tool 동작시키기\nSUMO 예시 프로젝트 보기\n\n이 튜토리얼은 윈도우를 기준으로 작성되었습니다. 2025년 강의 수강생 중 MAC 사용자가 있어, 해당 학생의 질문을 기준으로 MAC 설치 방법을 작성하였으나, 오류가 있을 수 있습니다. 양해해주시면 감사드리겠습니다.\n튜토리얼 오류, 문의 사항 등을 아래의 주소로 메일 보내주시면 감사드리겠습니다.\n문의 이메일 : yoonim98@hanyang.ac.kr",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "1  Intro : SUMO 소개",
+    "section": "",
+    "text": "SUMO 프로그램은 독일 우주항공 센터(Deutsches Zentrum für Luft-und Raumfahrt)의 교통 시스템 연구원에서 개발한 오픈소스 교통 시뮬레이션 프로그램입니다.\nSUMO는 Simulation of Urban MObility의 약어인데, 이 이름처럼 도로 교통, 대중교통, 멀티모달 통행, 보행자 교통, PM 등 다양한 도시 교통수단에 대해 시뮬레이션을 제공합니다. 또한, Window, Mac, Linux 등 3가지 운영체제에서 시뮬레이션을 수행할 수 있습니다.\n또한, 개별 차량의 움직임을 차량 추종 모형을 적용하여 구현하는 마이크로 시뮬레이션입니다(Lopez et al. 2018).\nSUMO를 통해서 교통 정책, 신호 체계 변경의 효과 등을 예측해 볼 수 있습니다. 그 밖에도, 차량의 오염원 배출량, 에너지 소비량 등도 시뮬레이션해 볼 수 있습니다.\n\n\n\n\n\nLopez, Pablo Alvarez, Michael Behrisch, Laura Bieker-Walz, et al. 2018. “Microscopic Traffic Simulation using SUMO.” 2018 21st International Conference on Intelligent Transportation Systems (ITSC), January, 2575–82. https://doi.org/10.1109/ITSC.2018.8569938.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Intro : SUMO 소개</span>"
+    ]
+  },
+  {
+    "objectID": "install.html",
+    "href": "install.html",
+    "title": "SUMO 환경 구성하기",
+    "section": "",
+    "text": "본 장에서 SUMO 환경을 구성하는 법을 아래와 같이 설명하였습니다.\n\nvs code 설치\nminiconda 설치와 sumo python 환경 설정\nsumo 설치\n\n본래, SUMO만 설치하여도 시뮬레이션을 할 수 있습니다. 다만, SUMO 프로그램은 Python tool set을 제공하고 있어, 이를 이용하기 위해서는 python이 필요합니다. 또한, SUMO의 입력과 출력 파일은 기본적으로 xml 형식으로 이루어져 있습니다. 이 xml 파일을 메모장으로 편집할 수 있지만, vscode와 같은 편집기를 사용하면 보다 쉽게 편집하고, 볼 수 있습니다. 미래에 sumo를 응용하여 쓰게 될 때, python code 작성하거나, sumo python tool 프로그램 사용할 때, vscode가 도움이 될 수 있습니다.\n이에 vscode 설치 방법, miniconda 설치 방법을 함께 서술하였습니다. sumo만 필요한 경우, sumo 설치만 따라하셔도 괜찮습니다. 그리고 기존에 사용하시는 코드 편집기가 이미 존재하고, python도 설치되어 있다면, 해당 장을 생략하셔도 괜찮습니다.\n설치 방법을 간략하게 작성하였는데, 보다 상세한 가이드라인이 필요한 경우, 구글 검색창에 윈도우 vscdoe 설치와 같이 입력하시면 상세한 자료를 찾을 수 있습니다.\n순수 python의 경우, 버전관리, 앞으로 설치할 python, 환경변수 설정 등이 복잡한 부분이 있어 miniconda를 설치하는 것으로 안내드립니다. miniconda는 가상 환경을 만들어, python을 이용할 수 있어 파이썬 버전관리, python path 관리 등의 문제를 덜 겪을 수 있습니다.\n이와 별개로, 순수 python이 이미 설치되어 있고, python path가 설정되어 있다면, 이 miniconda를 설치하지 않으셔도 됩니다. 본 튜토리얼에서 sumo conda 환경을 활성화하는 부분을 빼고 python을 사용하는 부분을 따라하시면 되기 때문입니다.",
+    "crumbs": [
+      "SUMO 환경 구성하기"
+    ]
+  },
+  {
+    "objectID": "install_vscode_in_window.html",
+    "href": "install_vscode_in_window.html",
+    "title": "2  VS CODE 설치 : 윈도우",
+    "section": "",
+    "text": "VS CODE 접속, Download for Windows 클릭해서 설치파일 다운로드 \n설치파일 VSCodeUserSetup-x64…exe 클릭.\n라이센스 동의하기, Next 버튼 눌러서 진행, Default 세팅 유지 \n설치완료",
+    "crumbs": [
+      "SUMO 환경 구성하기",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>VS CODE 설치 : 윈도우</span>"
+    ]
+  },
+  {
+    "objectID": "install_python_in_window.html",
+    "href": "install_python_in_window.html",
+    "title": "3  Miniconda 설치 : 윈도우",
+    "section": "",
+    "text": "3.1 Miniconda 설치",
+    "crumbs": [
+      "SUMO 환경 구성하기",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Miniconda 설치 : 윈도우</span>"
+    ]
+  },
+  {
+    "objectID": "install_python_in_window.html#miniconda-설치",
+    "href": "install_python_in_window.html#miniconda-설치",
+    "title": "3  Miniconda 설치 : 윈도우",
+    "section": "",
+    "text": "Miniconda Installer page 접속 후, miniconda installer 다운로드 \nminiconda 설치파일을 열기, 아래의 그림과 지시사항에 따라 진행\nSelect Installation Type화면에서 All users 선택\nMiniconda 설치 폴더 정하기\n\nDestination 옆 설치폴더 정하기 버튼 클릭\n로컬디스크 C 선택\n새폴더만들기 선택\n새폴더 이름을 miniconda로 입력\n확인버튼 클릭\n\nAdvanced Installation Option에서 Create shortcuts, Clear the package cache upon completion 체크 박스 선택\n설치 완료 후, 윈도우 프로그램 창에서 anaconda prompt 찾아서 연 후, 아래의 명령어 입력\n\n이 작업을 하는 이유는 cmd 창에서 conda 명령어를 사용할 수 있게 하기 위해서입니다.\n\nconda init cmd.exe\n\n윈도우 프로그램 창에 cmd 입력, 관리자 권한으로 cmd 열기 클릭\ncmd 창에 아래의 명령어 입력 후, 다음 명령줄 앞에 (base)가 아래 그림과 같이 뜨면 miniconda 설치 성공",
+    "crumbs": [
+      "SUMO 환경 구성하기",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Miniconda 설치 : 윈도우</span>"
+    ]
+  },
+  {
+    "objectID": "install_python_in_window.html#sumo-콘다-파이썬-환경-만들기",
+    "href": "install_python_in_window.html#sumo-콘다-파이썬-환경-만들기",
+    "title": "3  Miniconda 설치 : 윈도우",
+    "section": "3.2 SUMO 콘다 파이썬 환경 만들기",
+    "text": "3.2 SUMO 콘다 파이썬 환경 만들기\n\ncmd 창 열기\nsumo 전용 conda 환경을 만들기 위해 아래 명령어 입력\n\n환경명 : sumopy\n파이썬 버전 : 3.11\n만약 파이썬 버전 3.11에서 sumo tool을 쓰는 데 문제가 생긴다면, 3.7버전의 새로운 환경을 만들어서 사용하시면 됩니다.\n\nconda create -n sumopy python=3.11\n\n명령어 입력하여 sumopy 활성화 하기\n\n아래 명령어 입력 후, 나오는 다음 명령줄 앞에 (sumopy)가 나오면 환경이 정상적으로 생성된 것입니다.\n\nconda activate sumopy\npython 버전 확인하기\n\n파이썬 버전이 나오면 환경에서 파이썬이 정상적으로 설치된 것입니다.\n\npython --version\n아래 명령어를 입력하여, sumo python tools에 필요한 패키지 설치\n\npython -m pip install -r \"%SUMO_HOME%\\tools\\requirements.txt\"\n\n\nsumopy를 활성화한 뒤에 sumo 관련 파이썬 코드를 사용하거나 관련 패키지를 설치하는 것이 좋습니다.",
+    "crumbs": [
+      "SUMO 환경 구성하기",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Miniconda 설치 : 윈도우</span>"
+    ]
+  },
+  {
+    "objectID": "install_sumo_in_window.html",
+    "href": "install_sumo_in_window.html",
+    "title": "4  SUMO 설치 : 윈도우",
+    "section": "",
+    "text": "4.1 sumo 환경변수 설정\n명령어 입력\n환경변수 설정 1. sumo bin path를 환경변수로 설정해야합니다. 2. SUMO Path 환경변수 설정하기 3.내가 설치한 SUMO 폴더를 찾는다 4.SUMO 폴더에 들어간다 5.bin폴더에 들어간다. 6.폴더 바탕에서 오른쪽 키를 클릭한다 7.속성을 클릭한다 8.보안탭에 들어간다 9.개체 이름을 복사한다. 10. 복사한 값은 sumo bin 폴더의 path(주소)이다. 11. F:\\Program Files\\sumo\\bin(자기 sumo&gt;bin 폴더의 주소값) 12. 윈도우키&gt;설정&gt;시스템&gt;정보&gt;고급시스템 설정 &gt;고급 Tab clik 1. 환경변수 클릭 2. Path 클릭 3. 편집 클릭 4. 새로만들기 클릭 5. 복사한 주소값 넣기 6. 적용 7. cmd 켜기 8. 작동확인 9. ppt에 나와있는대로 SUMO_HOME, Path에 sumo bin 구성되어 있는 지 확인 10. 안되면 sumo 삭제 후, 디폴트 상태로 재설치(환경변수 추가에 Check하여 설치) or 메일로 문의",
+    "crumbs": [
+      "SUMO 환경 구성하기",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>SUMO 설치 : 윈도우</span>"
+    ]
+  },
+  {
+    "objectID": "SUMO mac OS building.html",
+    "href": "SUMO mac OS building.html",
+    "title": "5  MAC 설치",
+    "section": "",
+    "text": "5.0.1 git 설치, Homebrew 설치\nsumo mac build https://sumo.dlr.de/docs/Downloads.php#macos download sumo SUMO_HOME environment sumo lunchers download\n아래 블로그 링크 따라하기\nwiseah 블로그",
+    "crumbs": [
+      "SUMO 환경 구성하기",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>MAC 설치</span>"
+    ]
+  },
+  {
+    "objectID": "SUMO mac OS building.html#second",
+    "href": "SUMO mac OS building.html#second",
+    "title": "5  MAC 설치",
+    "section": "5.1 second",
+    "text": "5.1 second\n\n5.1.1 Hombrew install is recommended\n\nterminal 켜기 \n\ntermainal 순서대로 입력(복붙)\n/bin/bash -c \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)\"\nbrew update\nxcode-select --install\nclang --version\nbrew install cmake\nbrew install --cask xquartz\nbrew install xerces-c fox proj gdal gl2ps\nbrew install python ccache googletest fmt swig eigen apache-arrow pygobject3 gtk+3 adwaita-icon-theme python3 -m pip install texttest\ngit clone --recursive https://github.com/eclipse-sumo/sumo \nexport SUMO_HOME=\"$PWD/sumo\"\ncd $SUMO_HOME\ncmake -B build .\ncd $SUMO_HOME\ncmake --build build --parallel $(sysctl -n hw.ncpu)\nDownload SUMO lanchers",
+    "crumbs": [
+      "SUMO 환경 구성하기",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>MAC 설치</span>"
+    ]
+  },
+  {
+    "objectID": "basic_example.html",
+    "href": "basic_example.html",
+    "title": "SUMO 기초 실습",
+    "section": "",
+    "text": "프로젝트 폴더 생성\n간단한 네트워크 만들기와 통행 생성을 통해서 SUMO 시뮬레이션을 해보는 장입니다. 간단한 실습을 통해서 SUMO를 사용해보는 것이 목적입니다. 이 실습 장 이후에 SUMO 이론과 동작 순서를 설명하겠습니다. 이런 프로그램은 우선 일단 한 번 돌려보면, 사용 순서나 프로그램이 구현하고자 하는 개념을 쉽게 이해할 수 있는 것 같습니다.\n실습을 하기 이전에 프로젝트 폴더 만들기, Net Edit 프로그램 여는 법, Net Edit에서 네트워크 저장하는 법, VS CODE에서 프로젝트 폴더 여는 법, VS CODE에서 CMD 여는 법을 먼저 설명 드리겠습니다.\nSUMO 시뮬레이션을 위해서는 많은 입력 파일이 필요합니다. 한 개의 폴더에서 시뮬레이션 입력 파일을 관리하는 것이 오류를 찾고, 고치기에 더 쉽습니다. 그래서 하나의 시뮬레이션에 하나의 폴더를 만드는 것이 좋습니다.\n폴더 경로명에 한글이 있으면 오류가 생길 수 있습니다. 영문으로 된 경로에 시뮬레이션 프로젝트를 생성하는 것이 좋습니다. D:\\2026\\2026_sumo_tutorial\\basic_example과 같은 경로를 권장합니다.",
+    "crumbs": [
+      "SUMO 기초 실습"
+    ]
+  },
+  {
+    "objectID": "basic_example.html#net-edit",
+    "href": "basic_example.html#net-edit",
+    "title": "SUMO 기초 실습",
+    "section": "Net Edit",
+    "text": "Net Edit\nNet Edit은 SUMO 네트워크를 생성, 편집할 수 있는 GUI 프로그램입니다. SUMO를 설치한 후, 윈도우 프로그램 창에 Net Edit을 검색하여 프로그램을 찾고, 열 수 있습니다. ctrl+s' 혹은File&gt; Save Network`로 네트워크를 저장할 수 있습니다.\n\n\nNet edit 기초 도구\nNetwork를 작성하는 가장 기초적인 도구입니다. 그 외 도구 설명은 SUMO Documentation - Net Edit 참고 바랍니다.\n\nInspect tool\n\n오브젝트 정보 보기 & 수정\n\nID 수정\nNode - Edge 연결정보 수정\n개체 속성값(최고 속도, 수단) 수정 등\n\n\n\nDelete tool\n\n오브젝트 삭제\n\nDrawing tool\n\nEdge 생성\n\nConnection Tool\n\n좌우회전, 유턴 등 Edge의 차선 lane 간의 교차로 연결 정보 보기 및 수정 기능\n\nTraffic Light tool\n\n교차로(Node)에 신호 정보 생성\n신호 현시 설정\n신호 간 offset 설정\n\nHide junction\n\nJuntion(Node) 도형 숨기기, 표출하기\nEdg와 Node 간 연결이 이상할 때, 해당 기능을 이용하여 lane 간 연결을 볼 수 있다.\n\nEdge Opposite Direction\n\n쌍방향 Edge를 한 번에 그릴 수 있다.\n\n\n\nInspect tool 패널에서 볼 수 있는 Edge 속성 설명",
+    "crumbs": [
+      "SUMO 기초 실습"
+    ]
+  },
+  {
+    "objectID": "basic_example.html#vs-code",
+    "href": "basic_example.html#vs-code",
+    "title": "SUMO 기초 실습",
+    "section": "VS CODE",
+    "text": "VS CODE\n\nVS CODE에서 프로젝트 폴더 여는 법\n\n윈도우 프로그램 창에서 vs code 검색해서 vs code 열기\nFile&gt; Open Foler 클릭 \n미리 생성하여 둔 프로젝트 경로 폴더 선택. D:\\2026\\2026_sumo_tutorial\\basic_example \n\n\n\nVS CODE에서 CMD 여는 법\n\n단축키 ctrl + ` 누르기 or Terminal &gt; New Terminal 클릭\n하단 Tabl에서 Termianl tab을 고르고, + 버튼을 누르고 Command Prompt 선택",
+    "crumbs": [
+      "SUMO 기초 실습"
+    ]
+  },
+  {
+    "objectID": "basic_net_generate.html",
+    "href": "basic_net_generate.html",
+    "title": "6  Network 그리기",
+    "section": "",
+    "text": "window 프로그램 창 열고, net edit 입력하여, network 편집기 켜기\n\nFile &gt; New Network 클릭\nFile &gt; Save Network As 클릭\n프로젝트 폴더 선택\n파일명으로 basic_net 입력\n\nEdge Mode 클릭, Edge Opposite Direcition 클릭해서 아래 그림과 같이 그리기\n\n완성 그림 \nEDGE 그리는 법 영상\n\n\n\n\nInspect Tool 이용하여, 각 EDGE의 ID를 그림과 같이 입력해줍니다.\n\n목표 그림 \nID 입력하는 법 영상 \n\nVS CODE에서 프로젝트 폴더를 열면, basic_net.net.xml이 생성된 것을 확인할 수 있습니다.",
+    "crumbs": [
+      "SUMO 기초 실습",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Network 그리기</span>"
+    ]
+  },
+  {
+    "objectID": "basic_net_traffic_sign.html",
+    "href": "basic_net_traffic_sign.html",
+    "title": "7  신호 입력하기",
+    "section": "",
+    "text": "traffic light mode를 클릭하고, 교차로(Junction)을 선택하면 신호를 생성할 수 있다. 아래 그림과 같이 신호를 생성해봅시다.\n\n그림 \n영상 \n\n좌측 Edit Traffic Light 패널의 Phases에서 신호 현시를 설정할 수 있다.\n\n각 소문자는 교차로에서 lane-lane 간의 신호 상태를 의미한다. 시계 방향 순으로 정렬된다. r을 빨간불, g는 비보호 초록불, y는 노란불, G은 초록불이다.\nOffset을 통해 신호 간 시간 간격을 설정할 수 있다.\n\n\n더 궁금한 것이 있다면 sumo document - traffic lights을 참고하시기 바랍니다.",
+    "crumbs": [
+      "SUMO 기초 실습",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>신호 입력하기</span>"
+    ]
+  },
+  {
+    "objectID": "basic_trip_generate.html",
+    "href": "basic_trip_generate.html",
+    "title": "8  교통 수요 생성",
+    "section": "",
+    "text": "8.1 통행 발생, 통행 분포 생성\n도로 위를 지나는 차량은 이 네트워크에 대한 교통 수요라고 볼 수 있습니다. 교통 수요를 SUMO에 입력하면, 특정 교통 수요가 발생했을 때의 네트워크에서의 교통 흐름을 볼 수 있습니다.\n교통 흐름을 보기 위해서는 우선 교통 수요를 추정해야합니다. 교통 수요는 4단계로 추정합니다. ==통행 발생, 통행 분포, 수단 선택, 통행 배정==입니다.\n우선 기본 예제 에서는 이미 수단이 차량으로 선택되어 있기 때문에, 차량의 통행 발생, 통행 분포, 통행 배정의 결과를 추정하면 됩니다. 이 추정 결과를 SUMO에 입력하면 차량 시뮬레이을 볼 수 있습니다.\nSUMO는 통행 발생, 통행 분포, 노선 배정을 할 수 있는 프로그램을 제공합니다.\n이번 기본 실습에서는 차량 통행 발생, 차량 통행 분포, 차량 통행 배정 즉 노선 배정(routing)을 해 보겠습니다.\nsumo에서는 차량 통행 발생과 통행 분포를 od2trips 프로그램으로 수행할 수 있습니다. OD matrix 파일을 만들고, 이 파일을 od2trips에 넣어주면, OD matrix에 맞춰 차량 통행을 생성할 수 있습니다.",
+    "crumbs": [
+      "SUMO 기초 실습",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>교통 수요 생성</span>"
+    ]
+  },
+  {
+    "objectID": "basic_trip_generate.html#통행-발생-통행-분포-생성",
+    "href": "basic_trip_generate.html#통행-발생-통행-분포-생성",
+    "title": "8  교통 수요 생성",
+    "section": "",
+    "text": "8.1.1 TAZ 정의\nOD matrix를 만들기 전에 우선, 이 OD가 되는 TAZ(Traffic Analysix Zone)을 설정해야합니다. sumo에서 taz는 edge들의 합으로 구성됩니다. 그러므로, 개별 edge를 taz로 만들어도 되고, 여러개의 edge를 묶어서 하나의 TAZ로 구성할 수 있습니다.\n이번 실습에서는 아래 그림과 같이 4개의 TAZ를 구성해보겠습니다. \nSUMO에서 TAZ 정의는 taz.xml파일을 통해 정의 할 수 있습니다. TAZ 정의 파일명 : basic_taz.taz.xml\n\nvs code에서 프로젝트 폴더 열기 -&gt; 프로젝트 폴더 옆 New File 아이콘 클릭 혹은 오른쪽 마우스 클릭 &gt; New File'클릭 -&gt; 파일명basic_taz.taz.xml`입력 \n위 taz 정의 그림과 같이 taz와 edge 연결 관계 정의하기 위해 xml 파일을 아래와 같이 작성하고 파일을 저장합니다. taz의 입구 도로, 출구 도로를 각각 source와 sink로 표기합니다. source edge와 sink edge를 정의하지 않으면, od2trips에서 도로 연결 관계에 맞지 않은 통행을 생성하게 되고, 이 통행에 경로를 배정할 수 없어 시뮬레이션을 진행할 수 없게 됩니다. sink, source 표기를 통해 도로의 연결 관계를 반영하여 통행을 생성할 수 있습니다.\n\n&lt;tazs&gt;\n    &lt;taz id=\"taz_1\"&gt; \n    &lt;!-- taz input edge 정의 --&gt;\n        &lt;tazSource id=\"a33\" weight =\"1\"/&gt;\n        &lt;tazSource id=\"a4\" weight =\"1\"/&gt;\n        &lt;tazSource id=\"h2\" weight=\"1\"/&gt;\n        &lt;tazSource id=\"k2\" weight=\"1\"/&gt;\n        &lt;tazSource id=\"i2\" weight=\"1\"/&gt;\n        &lt;tazSource id=\"b33\" weight=\"1\"/&gt;\n    &lt;!-- taz output edge 정의 --&gt;\n        &lt;tazSink id=\"a3\" weight=\"1\"/&gt;\n        &lt;tazSink id=\"a44\" weight=\"1\"/&gt;\n        &lt;tazSink id=\"h22\" weight=\"1\"/&gt;\n        &lt;tazSink id=\"k22\" weight=\"1\"/&gt;\n        &lt;tazSink id=\"i22\" weight=\"1\"/&gt;\n        &lt;tazSink id=\"b3\" weight=\"1\"/&gt;\n    &lt;/taz&gt;\n    &lt;taz id=\"taz_2\"&gt;\n    &lt;!-- taz input edge 정의 --&gt;\n        &lt;tazSource id=\"c4\" weight=\"1\"/&gt;\n        &lt;tazSource id=\"c33\" weight=\"1\"/&gt;\n        &lt;tazSource id=\"i3\" weight=\"1\"/&gt;\n        &lt;tazSource id=\"h33\" weight=\"1\"/&gt;\n    &lt;!-- taz output edge 정의 --&gt;\n        &lt;tazSink id= \"c44\" weight=\"1\"/&gt;\n        &lt;tazSink id= \"c3\" weight=\"1\"/&gt;\n        &lt;tazSink id= \"i33\" weight=\"1\"/&gt;\n        &lt;tazSink id= \"h3\" weight=\"1\"/&gt;\n    &lt;/taz&gt;\n    &lt;taz id =\"taz_3\"&gt;\n    &lt;!-- taz input edge 정의 --&gt;\n        &lt;tazSource id=\"a2\" weight=\"1\"/&gt;\n        &lt;tazSource id=\"a11\" weight=\"1\"/&gt;\n        &lt;tazSource id=\"j11\" weight=\"1\"/&gt;\n        &lt;tazSource id=\"j2\" weight=\"1\"/&gt;\n        &lt;tazSource id=\"b2\" weight=\"1\"/&gt;\n    &lt;!-- taz output edge 정의 --&gt;\n        &lt;tazSink id= \"a22\" weight=\"1\"/&gt;\n        &lt;tazSink id= \"a1\" weight=\"1\"/&gt;\n        &lt;tazSink id= \"j1\" weight=\"1\"/&gt;\n        &lt;tazSink id=\"j22\" weight=\"1\"/&gt;\n    &lt;/taz&gt;\n    &lt;taz id =\"taz_4\"&gt;\n    &lt;!-- taz input edge 정의 --&gt;\n        &lt;tazSource id= \"c11\" weight=\"1\"/&gt;\n        &lt;tazSource id= \"j4\" weight=\"1\"/&gt;\n        &lt;tazSource id= \"k33\" weight=\"1\"/&gt;\n        &lt;tazSource id= \"c2\" weight=\"1\"/&gt;\n    &lt;!-- taz output edge 정의 --&gt;\n        &lt;tazSink id= \"c1\" weight=\"1\"/&gt;\n        &lt;tazSink id= \"j44\" weight=\"1\"/&gt;\n        &lt;tazSink id= \"k3\" weight=\"1\"/&gt;\n        &lt;tazSink id= \"c22\" weight=\"1\"/&gt;\n        &lt;tazSink id= \"b22\" weight=\"1\"/&gt;\n    &lt;/taz&gt;\n&lt;/tazs&gt;\n\n\n\n8.1.2 OD matrix 정의\n아래 그림 파란색 화살표와 숫자를 차량의 이동이라고 합시다.\n\n이와 같은 OD 차량 흐름을 표로 정리할 수 있습니다.\n\n\n\nO\nD\ncar volume\n\n\n\n\ntaz_1\ntaz_2\n10.00\n\n\ntaz_1\ntaz_3\n20.00\n\n\ntaz_1\ntaz_4\n20.00\n\n\ntaz_2\ntaz_1\n20.00\n\n\ntaz_2\ntaz_3\n30.00\n\n\ntaz_2\ntaz_4\n20.00\n\n\ntaz_3\ntaz_1\n30.00\n\n\ntaz_3\ntaz_2\n40.00\n\n\ntaz_3\ntaz_4\n20.00\n\n\ntaz_4\ntaz_1\n10.00\n\n\ntaz_4\ntaz_2\n30.00\n\n\ntaz_4\ntaz_3\n10.00\n\n\n\n이 표를 od2trips가 읽을 수 있는 od matrix 파일로 작성해봅시다.\n\nvscode 열기 &gt; 새파일 &gt; 파일명 basic_od_matrix.od 작성\n아래의 od matrix 파일을 입력하고 파일 저장\n\n$OR;D2\n* From-Time  To-Time\n0.00 1.00\n* Factor\n1.00\n* some\n* additional\n* comments\n        taz_1      taz_2      10.00\n        taz_1      taz_3      20.00\n        taz_1      taz_4      20.00\n        taz_2      taz_1      20.00\n        taz_2      taz_3      30.00\n        taz_2      taz_4      20.00\n        taz_3      taz_1      30.00\n        taz_3      taz_2      40.00\n        taz_3      taz_4      20.00\n        taz_4      taz_1      10.00\n        taz_4      taz_2      30.00\n        taz_4      taz_3      10.00\n\n코드 설명\n\n\n\n줄\n의미\n\n\n\n\n$OR;D2\nPTV O-format 매트릭스\n\n\n0.00 1.00\n시뮬레이션 시작·종료 시각 1시간 시뮬레이션\n\n\n1.00\ncar volume에 곱하는 scale 상수\n\n\ntaz_1 taz_2 10.00\n출발 TAZ, 도착 TAZ, 차량 수\n\n\n*\n주석 표기\n\n\n\n상세한 matrix 파일 설명은 sumo document - od matrix &gt; PTV formats에서 확인하실 수 있습니다.\n\n\n8.1.3 od2trips configuration 파일 작성\ntaz 정의와 od matrix 정의를 od2trips 프로그램에 전달하면, od2trips 프로그램을 통해 차량 통행 파일 trips을 생성할 수 있습니다. 이런 입력 파일과 결과 파일을 어떻게 od2trips에 입력할 수 있을까요? configuration 파일을 통해 od2trips의 입력, 결과 파일을 전달 할 수 있습니다. configuration은 설정을 의미하며, od2trips 프로그램 설정을 xml로 작성한 것입니다.\n\nvs code 열기 &gt; 새 파일 &gt; 파일명 basic_od_config.config.xml 입력\n아래와 같이 od2trips configuration을 입력하고 파일 저장\n\n&lt;configuration&gt;\n&lt;!-- od2trips input 파일 정의 --&gt;\n    &lt;input&gt;\n        &lt;!-- taz 파일 입력 --&gt;\n        &lt;taz-files value=\"basic_taz.taz.xml\"/&gt;\n        &lt;!-- od maatrix 파일 입력 --&gt;\n        &lt;od-matrix-files value=\"basic_od_mtrix.od\"/&gt;\n    &lt;/input&gt;\n&lt;!-- od2trips output 파일 정의 --&gt;\n    &lt;output&gt;\n        &lt;!-- 차량 통행 파일명 정의, od2trips를 실행하고 나면, 그 결과물로 산출되는 차량 통행이 이 파일명으로 나타난다. --&gt;\n        &lt;output-file value=\"basic_od_trips.odtrips.xml\"/&gt;\n    &lt;/output&gt;\n&lt;/configuration&gt;\n\n상세한 od2trips의 configuration 속성값은 sumo document od2trips에서 확인할 수 있습니다.\n\n\n8.1.4 od2trips 차량 통행 생성하기\n\nvs code 프로젝트 폴더에서 터미널 열고, cmd 켜기 (`ctrl+`) 아래 명령어 입력\n\nod2trips -c basic_od_config.config.xml\n\n\nod2trips 프로그램이 성공하면, configuration에서 정의하였던 산출물 차량 통행 파일 basic_od_trips.odtrips.xml이 나타난다. 이로서 통행이 생성되었다!\n\n\n\nbasic_od_trips.odtrips.xml 파일에 나타난 통행을 해석할 수 있다. 만약 통행 즉 trip이 아래의 코드와 같의 나타나있다면, 이는 id 62 통행이 0초에 h3에서 출발해서 h22로 같나든 것이다. 출발 taz는 taz_2이고, 종료 taz는 h22가 속한 taz_1이다. 이와 같이 od2trips로 생성한 통행은 출발시각, 출발지, 목적지만 나타나있고, 그 경로는 나타나있지 않다. 고로, 다음 작업은 각 통행에 경로를 배정하는 일입니다.\n\n    &lt;trip id=\"62\" depart=\"0\" from=\"c4\" to=\"k22\" fromTaz=\"taz_2\" toTaz=\"taz_1\" departLane=\"free\" departSpeed=\"max\"/&gt;",
+    "crumbs": [
+      "SUMO 기초 실습",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>교통 수요 생성</span>"
+    ]
+  },
+  {
+    "objectID": "basic_trip_generate.html#통행에-경로-배정-하기",
+    "href": "basic_trip_generate.html#통행에-경로-배정-하기",
+    "title": "8  교통 수요 생성",
+    "section": "8.2 통행에 경로 배정 하기",
+    "text": "8.2 통행에 경로 배정 하기\nsumo에서는 경로를 배정하는 여러가지 프로그램을 제공합니다. 이번 기초 실습에서는 duarouter를 이용하여 경로를 배정합니다. duarouter는 통행에 최단 경로를 배정하는 프로그램입니다. duarouter 이외에도 많은 경로 배정 방법이 있습니다만, 이는 tutorial의 범위를 넘어서서 다루지 않습니다. 심화사항은 sumo documentation - introduction to demand modeling in sumo에서 확인하실 수 있습니다.\nduarouter도 od2trips와 동일하게 configuration 파일을 통해, 입력, 결과 파일을 정의할 수 있습니다.\n\nvscode 열기 &gt; new file &gt; 파일명: basic_duarouter_config.config.xml 만들기\n아래의 duarouter configuration 입력한 뒤, 파일 저장\n\n&lt;configuration&gt;\n&lt;!-- duarouter input 파일 정의 --&gt;\n    &lt;input&gt;\n        &lt;!-- network 파일 입력 --&gt;\n        &lt;net-file value=\"basic_net.net.xml\"/&gt;\n        &lt;!-- routing(경로 배정)이 필요한 od trips(통행) 파일 입력 --&gt;\n        &lt;route-files value=\"basic_od_trips.odtrips.xml\"/&gt;\n    &lt;/input&gt;\n&lt;!-- duarouter output 파일 정의 --&gt;\n    &lt;output&gt;\n        &lt;!-- 산출물인 경로 배정한 통행 파일명 정의--&gt;\n        &lt;output-file value=\"basic_shortest_routes.rou.xml\"/&gt;\n    &lt;/output&gt;\n&lt;!-- duarouter processing option 정의 --&gt;\n    &lt;processing&gt;\n        &lt;repair value=\"true\"/&gt;\n        &lt;repair.from value=\"true\"/&gt;\n        &lt;repair.to value=\"true\"/&gt;\n    &lt;/processing&gt;\n&lt;/configuration&gt;\n\nvs code에서 cmd 열기 &gt; 아래 명령어 입력\n\nduarouter -c basic_duarouter_config.config.xml\n\n\n명령이 성공하면, 폴더 아래 산출물 파일 basic_shortest_routes.rou.xml이 생깁니다. \nduarouter를 통해 경로가 edge c2 k3 i33 c33 h3가 통행 242번에 배정된 것을 확인할 수 있습니다.\n\n&lt;vehicle id=\"242\" depart=\"0\" departLane=\"free\" departSpeed=\"max\" fromTaz=\"taz_4\" toTaz=\"taz_2\"&gt;\n        &lt;route edges=\"c2 k3 i33 c33 h3\"/&gt;\n이로써, 드디어 교통 수요를 생성하였습니다!",
+    "crumbs": [
+      "SUMO 기초 실습",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>교통 수요 생성</span>"
+    ]
+  },
+  {
+    "objectID": "basic_simulation.html",
+    "href": "basic_simulation.html",
+    "title": "9  시뮬레이션 하기",
+    "section": "",
+    "text": "9.1 sumo configuration 정의하기\n네트워크와 교통 수요를 만들었으니, 이제 시뮬레이션을 하면 됩니다. sumo는 시뮬레이션 엔진 프로그램입니다. sumo를 동작하려면 어떤 네트워크 파일과 교통 수요 파일을 사용할 것인지 정의해줘야합니다. 이또한 od2trips와 duarouter처럼, sumo_configuration 파일로 정의할 수 있습니다. 또한, 시뮬레이션 이후에 결과 파일을 무엇을 받을지도 정의할 수 있습니다.\n시뮬레이션 영상",
+    "crumbs": [
+      "SUMO 기초 실습",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>시뮬레이션 하기</span>"
+    ]
+  },
+  {
+    "objectID": "basic_simulation.html#sumo-configuration-정의하기",
+    "href": "basic_simulation.html#sumo-configuration-정의하기",
+    "title": "9  시뮬레이션 하기",
+    "section": "",
+    "text": "vs code 열기 &gt; 새파일 &gt; 파일명 basic_sumo_config.sumocfg 입력, 확장자 sumocfg여야 합니당!\n파일에 아래 내용 입력\n\n&lt;configuration&gt;\n    &lt;input&gt; \n    &lt;!-- 네트워크 파일명 --&gt;\n        &lt;net-file value=\"basic_net.net.xml\"/&gt; \n    &lt;!-- 경로 배정한 파일명 --&gt;\n        &lt;route-files value=\"basic_shortest_routes.rou.xml\"/&gt; \n    &lt;/input&gt; \n    &lt;time&gt; \n    &lt;!-- 만약 시뮬레이션을 간단하게 하고 싶으면 OD matrix에서 0, 1을 입력하여서, 0, 3600을 여기에 입력하면 됨--&gt;\n        &lt;begin value=\"0\"/&gt; \n        &lt;end value=\"3600\"/&gt; \n    &lt;/time&gt;\n    &lt;output&gt;\n    &lt;!-- edge 시뮬레이션 결과 출력--&gt;\n        &lt;edgedata-output value=\"edge_output.xml\"/&gt;\n    &lt;!-- edge lane 차선 시뮬레이션 결과 출력--&gt;\n        &lt;lanedata-output value=\"lane_output.xml\"/&gt;\n    &lt;!-- vehicle 별 통행 시뮬레이션 결과 출력--&gt;\n        &lt;tripinfo-output value =\"trip_info.xml\"/&gt;\n    &lt;/output&gt;\n&lt;/configuration&gt;\n\n\n윈도우 파일 탐색기 켜기 &gt; 프로젝트 폴더 &gt; ’basic_sumo_config.sumocfg’위에서 오른쪽 마우스키 클릭 &gt; sumo 열기 클릭 \n상단 도구줄에서 delay 200 입력, standard &gt; real world로 변경, 재생 버튼 클릭 \n\n\n\n3600초 동안의 시뮬레이션이 완료되고 나서, vs code에서 프로젝트 폴더를 열어보면 output file이 만들어진 것을 확인할 수 있습니다.",
+    "crumbs": [
+      "SUMO 기초 실습",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>시뮬레이션 하기</span>"
+    ]
+  },
+  {
+    "objectID": "basic_output.html",
+    "href": "basic_output.html",
+    "title": "10  결과 파일 해석",
+    "section": "",
+    "text": "10.1 edge_output.xml Parameter 설명",
+    "crumbs": [
+      "SUMO 기초 실습",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>결과 파일 해석</span>"
+    ]
+  },
+  {
+    "objectID": "basic_output.html#edge_output.xml-parameter-설명",
+    "href": "basic_output.html#edge_output.xml-parameter-설명",
+    "title": "10  결과 파일 해석",
+    "section": "",
+    "text": "travelTime : 평균 구간속도 기준 edge, lane 구간을 통과하는데 걸리는 시간(초)\nwatingTime: lane에서 달리지 못하고 대기하는 자동차의 대기 시간의 총합(대기시간)\n\n==watingTime이 직관적으로 이해하기 쉽다==\n\ntimeLoss: desired 속도보다 느리게 달려서 잃게 되는 시간의 총합\n\ndesired의 결정방식\n\n\n\n10.1.1 edge based\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\nbegin\n(simulation) seconds\nThe first time step the values were collected in\n\n\nend\n(simulation) seconds\nThe last time step + DELTA_T in which the reported values were collected\n\n\nedge@id\n(edge) id\nThe name of the reported edge\n\n\nlane@id\n(lane) id\nThe name of the reported lane\n\n\nsampledSeconds\ns\nThe number of vehicles that are present on the edge/lane in each second summed up over the measurement interval (may be subseconds if a vehicle enters/leaves the edge/lane).\n\n\ntraveltime\ns\nTime needed to pass the edge/lane, note that this is just an estimation based on the mean speed, not the exact time the vehicles needed. The value is based on the time needed for the front of the vehicle to pass the edge.\n\n\noverlapTraveltime\ns\nTime needed to pass the edge/lane completely, note that this is just an estimation based on the mean speed, not the exact time the vehicles needed. The value is based on the time any part of the vehicle was the edge.\n\n\ndensity\n#veh/km\nVehicle density on the edge\n\n\noverlapDensity\n#veh/km\nVehicle density on the edge. This value counts vehicles if any part along it’s length touches the edge. This should not be used for flow computation\n\n\nlaneDensity\n#veh/km/lane\nVehicle density on the edge per lane\n\n\noccupancy\n%\nOccupancy of the edge/lane in %. A value of 100 would indicate vehicles standing bumper to bumper on the whole edge (minGap=0).\n\n\nwaitingTime\ns\nThe total number of seconds vehicles were considered halting (speed &lt; speedThreshold). Summed up over all vehicles\n\n\ntimeLoss\ns\nThe total number of seconds vehicles lost due to driving slower than desired (summed up over all vehicles)\n\n\nspeed\nm/s\nThe mean speed on the edge/lane within the reported interval.  Caution: This is an average over time and space (space-mean-speed), rather than a local average over the vehicles (time-mean-speed). Since slow vehicles spend more time on the edge they will have a proportionally bigger influence on average speed.\n\n\nspeedRelative\n-\nquotient of mean speed value (see above) and the lane speed limit\n\n\ndeparted\n#veh\nThe number of vehicles that have been emitted onto the edge/lane within the described interval\n\n\narrived\n#veh\nThe number of vehicles that have finished their route on the edge lane\n\n\nentered\n#veh\nThe number of vehicles that have entered the edge/lane by moving from upstream\n\n\nleft\n#veh\nThe number of vehicles that have left the edge/lane by moving downstream\n\n\nlaneChangedFrom\n#veh\nThe number of vehicles that changed away from this lane\n\n\nlaneChangedTo\n#veh\nThe number of vehicles that changed to this lane\n\n\nvaporized\n#veh\nThe number of vehicles vaporized on this edge (only present if #veh &gt; 0)\n\n\nteleported\n#veh\nThe number of vehicles teleported from this edge (only present if #veh &gt; 0)\n\n\nflow\n#veh/hour\nThe number of vehicles passing this edge per hour. Vehicles that depart on this edge beyond position 0 or arrive before the end of the edge are fractionally disocunted\n\n\n\n\n\n\nAttribute Name\nValue Type\nDescription\n\n\n\n\nid\nid (string)\nThe id of this set of measurements. This user-defined id is needed for differentiating between multiple sets of measurements in a single output file.\n\n\nfile\nfilename\nThe path to the output file. The path may be relative.\n\n\nperiod (alias freq)\nint (time)\nThe aggregation period the values the detector collects shall be summed up. If not given the whole time interval from begin to end (see below) is aggregated.\n\n\nbegin\nint (time)\nThe time to start writing (intervals starting before this time are discarded). If not given, the simulation’s begin is used.\n\n\nend\nint (time)\nThe time to end writing (intervals starting at or after this time are discarded). If not given the simulation’s end is used.\n\n\nexcludeEmpty\nstring (true, false, defaults, modified)\nIf set to true, edges/lanes which were not used by a vehicle during this period will not be written; default: false. If set to “defaults” default values for travel time and speed depending on edge length and maximum speed get printed, “modified” will print values only for empty edges which have a dynamically adapted maximum speed.\n\n\nwithInternal\nbool\nIf set, junction internal edges/lanes will be written as well; default: false.\n\n\nmaxTraveltime\nfloat (time)\nThe maximum traveltime in seconds to write if only very small movements occur; default 100000.\n\n\nminSamples\nfloat (time)\nThe minimum total number of seconds vehicles have to be on the edge / lane to consider it non-empty; default: &gt;0.\n\n\nspeedThreshold\nfloat (m/s)\nThe maximum speed to consider a vehicle halting; default 0.1.\n\n\nvTypes\nstring\nspace separated list of vehicle type ids to consider. If not given, all vTypes will be considered.\n\n\ntrackVehicles\nbool\nwhether aggregation should be performed over all vehicles that entered the edge/lane in the aggregation interval\n\n\ndetectPersons\nstring list\nwhether pedestrians shall be recorded instead of vehicles. Allowed value is walk. Note: further modes are planned\n\n\nwriteAttributes\nstring list\nlist of attribute names that shall be written (defaults to all attribute)\n\n\nedges\nstring list\nrestrict output to the given list of edge ids\n\n\nedgesFile\nfilename\nrestrict output to the given the list of edges given in file (either one edgeID per line or an id prefixed with ‘edge:’ as in a selection file)",
+    "crumbs": [
+      "SUMO 기초 실습",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>결과 파일 해석</span>"
+    ]
+  },
+  {
+    "objectID": "openstreet_map_import.html",
+    "href": "openstreet_map_import.html",
+    "title": "11  OSM Network import",
+    "section": "",
+    "text": "OpenStreetMap 접속\n대상지 찾기\n좌측상단 내보내기 클릭\n수동으로 다른 지역 선택 클릭\n대상지 범위만큼 조절하고 내보내기 클릭 \nosm_용 별도 프로젝트 폴더 만들기 oms_sumo와 같이 생성\n다운로드 받은 map.osm을 해당 프로젝트 폴더로 옮기기 \nNet Edit 실행하여 File&gt;Import Foreign Network클릭\n다운로드 받은 map.osm 선택\n좌측 하단 확인 클릭",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>OSM Network import</span>"
+    ]
+  },
+  {
+    "objectID": "summary.html",
+    "href": "summary.html",
+    "title": "12  요약",
+    "section": "",
+    "text": "12.1 SUMO 사용 순서",
+    "crumbs": [
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>요약</span>"
+    ]
+  },
+  {
+    "objectID": "summary.html#sumo-사용-순서",
+    "href": "summary.html#sumo-사용-순서",
+    "title": "12  요약",
+    "section": "",
+    "text": "교통 공급(Supply) 정의 교통 인프라 공급을 정의하는 것\n\n\nNetwork 파일 만들기\n\n도로 Edge 속성 설정\n\n차선 수\n허용 교통 수단\n최고 속도 등\n\n교차로 설정\n신호 설정 등\n\n\n\n교통 수요(Demand) 정의 교통 수요를 정의하는 것, TAZ와 OD 기반으로 정의할 수 있다.\n\n\nTAZ 파일 작성\n\nTAZ에 속한 edge 작성, sink, source 구분\n\nOD matrix 작성\n\nTAZ를 단위로 od matrix 작성\n시작시각, 종료시각 입력\n\nod2trips로 OD matrix에 따른 통행 생성\n\nod2trips config 파일\n\n\nduarouter로 통행에 경로 배정\n\nduarouter config 파일\n\n\n\n시뮬레이션 sumo 실행\n\n\nsumo config 파일 작성\n시뮬레이션 실행\n결과 파일 확인",
+    "crumbs": [
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>요약</span>"
+    ]
+  },
+  {
+    "objectID": "summary.html#요약",
+    "href": "summary.html#요약",
+    "title": "12  요약",
+    "section": "12.2 요약",
+    "text": "12.2 요약\n하기 그림에 나타난 duarcfg_file은 기초 실습의 duarouter config 파일이며, od2trips.config 또한 기초 실습의 od2trip의 config 파일입니다. additional.xml은 금번 기초실습에서 sumo config파일에 합쳐서 서술하였습니다.",
+    "crumbs": [
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>요약</span>"
+    ]
+  },
+  {
+    "objectID": "asked.html",
+    "href": "asked.html",
+    "title": "13  많이 묻는 질문",
+    "section": "",
+    "text": "13.1 커넥션 버튼\n편집 후 도로의 경우 Edge 사이에 흰 색 공백도 보여 도로가 제대로 연결되어 있는 것인지도 의아합니다.",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>많이 묻는 질문</span>"
+    ]
+  },
+  {
+    "objectID": "self_study.html",
+    "href": "self_study.html",
+    "title": "14  SUMO 자습 자료",
+    "section": "",
+    "text": "sumo 공식 튜토리얼\nsumo 도큐먼트\n잘 설명된 한국어 블로그 교통앵무\n잘 설명해주는 Youtube 채널 KnowMaga",
+    "crumbs": [
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>SUMO 자습 자료</span>"
+    ]
+  },
+  {
+    "objectID": "qna_method.html",
+    "href": "qna_method.html",
+    "title": "15  이메일 문의",
+    "section": "",
+    "text": "아래와 같이 문의 주시면, 문제 해결에 도움이 됩니다.\n문의 주소 : yoonim98@hanyang.ac.kr 이메일 제목 : [교통공학 -SUMO] 이름(학과, 학번) 문의 이메일 내용 필수 포함 사항\n\n운영체제\n질문\n스크린 샷\n문제파일, 폴더 등",
+    "crumbs": [
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>이메일 문의</span>"
+    ]
+  }
+]
