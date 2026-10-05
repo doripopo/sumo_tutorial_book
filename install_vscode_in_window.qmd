@@ -1,0 +1,11 @@
+# VS CODE 설치 : 윈도우
+
+1. [VS CODE](https://code.visualstudio.com/) 접속, **Download for Windows** 클릭해서 설치파일 다운로드
+![visual studio code main](/image/install_window_visual_code_1.jpeg)
+
+2. 설치파일 VSCodeUserSetup-x64...exe 클릭. 
+3. 라이센스 동의하기, Next 버튼 눌러서 진행, Default 세팅 유지 
+![](/image/install_window_visual_code_2.jpeg)
+
+4. 설치완료 
+![](/image/install_window_visual_code_3.png)

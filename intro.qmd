@@ -1,0 +1,13 @@
+# Intro : SUMO 소개
+
+[SUMO](https://eclipse.dev/sumo/) 프로그램은 독일 우주항공 센터(Deutsches Zentrum für Luft-und Raumfahrt)의 교통 시스템 연구원에서 개발한 오픈소스 교통 시뮬레이션 프로그램입니다.
+
+SUMO는 Simulation of Urban MObility의 약어인데, 이 이름처럼 도로 교통, 대중교통, 멀티모달 통행, 보행자 교통, PM 등 다양한 도시 교통수단에 대해 시뮬레이션을 제공합니다. 또한, Window, Mac, Linux 등 3가지 운영체제에서 시뮬레이션을 수행할 수 있습니다.
+
+또한, 개별 차량의 움직임을 차량 추종 모형을 적용하여 구현하는 마이크로 시뮬레이션입니다[@lopezMicroscopicTrafficSimulation2018].
+
+SUMO를 통해서 교통 정책, 신호 체계 변경의 효과 등을 예측해 볼 수 있습니다. 그 밖에도, 차량의 오염원 배출량, 에너지 소비량 등도 시뮬레이션해 볼 수 있습니다.
+
+{{< video video/intro_coex.mp4
+    title="SUMO 예시 영상 서울 COEX 인근 영동대로"
+>}}
