@@ -170,7 +170,7 @@ taz 정의와 od matrix 정의를 od2trips 프로그램에 전달하면, od2trip
         <!-- taz 파일 입력 -->
         <taz-files value="basic_taz.taz.xml"/>
         <!-- od maatrix 파일 입력 -->
-        <od-matrix-files value="basic_od_mtrix.od"/>
+        <od-matrix-files value="basic_od_matrix.od"/>
     </input>
 <!-- od2trips output 파일 정의 -->
     <output>
