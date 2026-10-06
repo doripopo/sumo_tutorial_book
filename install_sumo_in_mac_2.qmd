@@ -1,4 +1,4 @@
-# mac에서 sumo, vscode, python 설치 방법 최신화
+# mac에서 sumo, vscode, python 설치 방법 2
 
 
 1. **XQuartz .pkg** 설치 (xquartz.org)
