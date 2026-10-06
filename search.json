@@ -85,8 +85,8 @@
     ]
   },
   {
-    "objectID": "SUMO mac OS building.html",
-    "href": "SUMO mac OS building.html",
+    "objectID": "install_sumo_in_mac.html",
+    "href": "install_sumo_in_mac.html",
     "title": "5  MAC 설치",
     "section": "",
     "text": "5.0.1 git 설치, Homebrew 설치\nsumo mac build https://sumo.dlr.de/docs/Downloads.php#macos download sumo SUMO_HOME environment sumo lunchers download\n아래 블로그 링크 따라하기\nwiseah 블로그",
@@ -96,8 +96,8 @@
     ]
   },
   {
-    "objectID": "SUMO mac OS building.html#second",
-    "href": "SUMO mac OS building.html#second",
+    "objectID": "install_sumo_in_mac.html#second",
+    "href": "install_sumo_in_mac.html#second",
     "title": "5  MAC 설치",
     "section": "5.1 second",
     "text": "5.1 second\n\n5.1.1 Hombrew install is recommended\n\nterminal 켜기 \n\ntermainal 순서대로 입력(복붙)\n/bin/bash -c \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)\"\nbrew update\nxcode-select --install\nclang --version\nbrew install cmake\nbrew install --cask xquartz\nbrew install xerces-c fox proj gdal gl2ps\nbrew install python ccache googletest fmt swig eigen apache-arrow pygobject3 gtk+3 adwaita-icon-theme python3 -m pip install texttest\ngit clone --recursive https://github.com/eclipse-sumo/sumo \nexport SUMO_HOME=\"$PWD/sumo\"\ncd $SUMO_HOME\ncmake -B build .\ncd $SUMO_HOME\ncmake --build build --parallel $(sysctl -n hw.ncpu)\nDownload SUMO lanchers",
