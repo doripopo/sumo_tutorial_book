@@ -47,6 +47,9 @@ format:
     theme:
       - cosmo
       - brand
+    include-in-header: 
+      text :
+        <meta name="google-site-verification" content="arImcSlaNZbWgw2eYA1E2jfx3v832cNYq2x_56bAmC0" />
   # pdf:
   #   documentclass: scrreprt
 
