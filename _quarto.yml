@@ -16,6 +16,7 @@ book:
         - install_python_in_window.qmd
         - install_sumo_in_window.qmd
         - install_sumo_in_mac.qmd
+        - install_sumo_in_mac_2.qmd
 
     - part : basic_example.qmd
       chapters:
