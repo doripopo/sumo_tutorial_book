@@ -4,6 +4,8 @@ project:
 book:
   title: "SUMO Tutorial"
   author: "유윤임"
+  site-url : https://doripopo.github.io/sumo_tutorial_book/
+  description: "교통 시뮬레이션 SUMO 설치, vscode 설치 등의 환경 설정, 네트워크 생성, 통행 생성,시뮬레이션 실행, Openstreet map import를 다루는 한국어 튜토리얼"
   date: "10/4/2026"
   chapters:
     - index.qmd
@@ -32,8 +34,13 @@ book:
 bibliography: references.bib
 
 resources: 
+  - robots.txt
   - video/*
   - image/*
+
+website:
+  open-graph: true
+  twitter-card: true
 
 format:
   html:
