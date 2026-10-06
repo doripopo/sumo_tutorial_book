@@ -191,7 +191,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./SUMO_mac _building.html" class="sidebar-item-text sidebar-link">
+  <a href="./install_sumo_in_mac.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">MAC 설치</span></span></a>
   </div>
 </li>
@@ -467,26 +467,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>vscode 열기 &gt; 새파일 &gt; 파일명 <code>basic_od_matrix.od</code> 작성</li>
 <li>아래의 od matrix 파일을 입력하고 파일 저장</li>
 </ol>
-<pre><code>$OR;D2
-* From-Time  To-Time
-0.00 1.00
-* Factor
-1.00
-* some
-* additional
-* comments
-        taz_1      taz_2      10.00
-        taz_1      taz_3      20.00
-        taz_1      taz_4      20.00
-        taz_2      taz_1      20.00
-        taz_2      taz_3      30.00
-        taz_2      taz_4      20.00
-        taz_3      taz_1      30.00
-        taz_3      taz_2      40.00
-        taz_3      taz_4      20.00
-        taz_4      taz_1      10.00
-        taz_4      taz_2      30.00
-        taz_4      taz_3      10.00</code></pre>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode txt code-with-copy"><code class="sourceCode default"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>$OR;D2</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>* From-Time  To-Time</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>0.00 1.00</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>* Factor</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>1.00</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>* some</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>* additional</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>* comments</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>        taz_1      taz_2      10.00</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>        taz_1      taz_3      20.00</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>        taz_1      taz_4      20.00</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>        taz_2      taz_1      20.00</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>        taz_2      taz_3      30.00</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>        taz_2      taz_4      20.00</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>        taz_3      taz_1      30.00</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>        taz_3      taz_2      40.00</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>        taz_3      taz_4      20.00</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>        taz_4      taz_1      10.00</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>        taz_4      taz_2      30.00</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>        taz_4      taz_3      10.00</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><img src="image/od_matrix.png" class="img-fluid"></p>
 <p>코드 설명</p>
 <table class="caption-top table">
@@ -534,7 +534,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>        <span class="co">&lt;!-- taz 파일 입력 --&gt;</span></span>
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>        &lt;<span class="kw">taz-files</span> <span class="ot">value=</span><span class="st">"basic_taz.taz.xml"</span>/&gt;</span>
 <span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>        <span class="co">&lt;!-- od maatrix 파일 입력 --&gt;</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>        &lt;<span class="kw">od-matrix-files</span> <span class="ot">value=</span><span class="st">"basic_od_mtrix.od"</span>/&gt;</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>        &lt;<span class="kw">od-matrix-files</span> <span class="ot">value=</span><span class="st">"basic_od_matrix.od"</span>/&gt;</span>
 <span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    &lt;/<span class="kw">input</span>&gt;</span>
 <span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- od2trips output 파일 정의 --&gt;</span></span>
 <span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">output</span>&gt;</span>

@@ -191,7 +191,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./SUMO mac OS building.html" class="sidebar-item-text sidebar-link">
+  <a href="./install_sumo_in_mac.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">MAC 설치</span></span></a>
   </div>
 </li>
@@ -279,7 +279,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
   <li><a href="#miniconda-설치" id="toc-miniconda-설치" class="nav-link active" data-scroll-target="#miniconda-설치"><span class="header-section-number">3.1</span> Miniconda 설치</a></li>
-  <li><a href="#sumo-콘다-파이썬-환경-만들기" id="toc-sumo-콘다-파이썬-환경-만들기" class="nav-link" data-scroll-target="#sumo-콘다-파이썬-환경-만들기"><span class="header-section-number">3.2</span> SUMO 콘다 파이썬 환경 만들기</a></li>
   </ul>
 </nav>
     </div>
@@ -328,37 +327,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><img src="image/install_miniconda_2.jpeg" class="img-fluid"></p></li>
 <li><p>윈도우 프로그램 창에 cmd 입력, 관리자 권한으로 cmd 열기 클릭</p></li>
 <li><p>cmd 창에 아래의 명령어 입력 후, 다음 명령줄 앞에 (base)가 아래 그림과 같이 뜨면 miniconda 설치 성공 <img src="image/install_miniconda_3.jpeg" class="img-fluid"></p></li>
-</ol>
-<hr>
-</section>
-<section id="sumo-콘다-파이썬-환경-만들기" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="sumo-콘다-파이썬-환경-만들기"><span class="header-section-number">3.2</span> SUMO 콘다 파이썬 환경 만들기</h2>
-<ol type="1">
-<li><p>cmd 창 열기</p></li>
-<li><p>sumo 전용 conda 환경을 만들기 위해 아래 명령어 입력</p>
-<ul>
-<li>환경명 : sumopy</li>
-<li>파이썬 버전 : 3.11</li>
-<li>만약 파이썬 버전 3.11에서 sumo tool을 쓰는 데 문제가 생긴다면, 3.7버전의 새로운 환경을 만들어서 사용하시면 됩니다.</li>
-</ul>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode cmd code-with-copy"><code class="sourceCode dosbat"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>conda create <span class="at">-n</span> sumopy python=3.11</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p><img src="image/install_miniconda_4.png" class="img-fluid"></p></li>
-<li><p>명령어 입력하여 sumopy 활성화 하기</p>
-<ul>
-<li>아래 명령어 입력 후, 나오는 다음 명령줄 앞에 (sumopy)가 나오면 환경이 정상적으로 생성된 것입니다.</li>
-</ul>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode cmd code-with-copy"><code class="sourceCode dosbat"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>conda activate sumopy</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
-<li><p>python 버전 확인하기</p>
-<ul>
-<li>파이썬 버전이 나오면 환경에서 파이썬이 정상적으로 설치된 것입니다.</li>
-</ul>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode cmd code-with-copy"><code class="sourceCode dosbat"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>python -<span class="at">-version</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
-<li><p>아래 명령어를 입력하여, sumo python tools에 필요한 패키지 설치</p></li>
-</ol>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode cmd code-with-copy"><code class="sourceCode dosbat"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>python <span class="at">-m</span> pip install <span class="at">-r</span> <span class="st">"</span><span class="pp">%</span><span class="va">SUMO_HOME</span><span class="pp">%</span><span class="st">\tools\requirements.txt"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p><img src="image/install_miniconda_6.jpeg" class="img-fluid"></p>
-<ol start="6" type="1">
-<li>sumopy를 활성화한 뒤에 sumo 관련 파이썬 코드를 사용하거나 관련 패키지를 설치하는 것이 좋습니다.</li>
 </ol>
 
 

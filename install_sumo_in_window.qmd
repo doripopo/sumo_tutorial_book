@@ -21,9 +21,58 @@ sumo --version
 ```
 ![](image/install_window_down7.jpeg)
 
+---
+
+## SUMO 콘다 파이썬 환경 설정하기
+
+1. cmd 창 열기
+2. sumo 전용 conda 환경을 만들기 위해 아래 명령어 입력
+
+   - 환경명 : sumopy
+   - 파이썬 버전 : 3.11
+   - 만약 파이썬 버전 3.11에서 sumo tool을 쓰는 데 문제가 생긴다면, 3.7버전의 새로운 환경을 만들어서 사용하시면 됩니다. 
+
+```cmd
+conda create -n sumopy python=3.11
+```
+![](image/install_miniconda_4.png)
+
+3. 명령어 입력하여 sumopy 활성화 하기 
+   - 아래 명령어 입력 후, 나오는 다음 명령줄 앞에 (sumopy)가 나오면 환경이 정상적으로 생성된 것입니다.
+```cmd
+conda activate sumopy
+```
+
+4. python 버전 확인하기
+   - 파이썬 버전이 나오면 환경에서 파이썬이 정상적으로 설치된 것입니다.
+```cmd
+python --version
+```
+
+5. 아래 명령어를 입력하여, sumo python tools에 필요한 패키지 설치
+
+```cmd
+python -m pip install -r "%SUMO_HOME%\tools\requirements.txt"
+```
+![](image/install_miniconda_6.jpeg)
+
+6. sumopy를 활성화한 뒤에 sumo 관련 파이썬 코드를 사용하거나 관련 패키지를 설치하는 것이 좋습니다. 
+
+
+---
 
 ## sumo 환경변수 설정
-환경변수 설정
+환경변수 설정은 아래의 두 명령어를 입력해서 반응이 없으면 수행합니다.
+
+```cmd
+sumo --version
+```
+
+```cmd
+echo %SUMO_HOME%
+```
+
+
 1. sumo bin path를 환경변수로 설정해야합니다.
 2. SUMO Path 환경변수 설정하기
 3. 내가 설치한 SUMO 폴더를 찾는다
