@@ -15,7 +15,7 @@ r을 빨간불, g는 비보호 초록불, y는 노란불, G은 초록불이다.
 
 Offset을 통해 신호 간 시간 간격을 설정할 수 있다.
 
-![](image/page-17.png)
+![](image/page-18.png)
 
 
 3. 더 궁금한 것이 있다면 [sumo document - traffic lights](https://sumo.dlr.de/docs/Simulation/Traffic_Lights.html)을 참고하시기 바랍니다.
