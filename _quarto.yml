@@ -15,7 +15,7 @@ book:
         - install_vscode_in_window.qmd
         - install_python_in_window.qmd
         - install_sumo_in_window.qmd
-        - SUMO_mac_OS_building.qmd
+        - install_sumo_in_mac.qmd
 
     - part : basic_example.qmd
       chapters:
