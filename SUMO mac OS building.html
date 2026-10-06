@@ -8,7 +8,7 @@
 
 <meta name="description" content="교통 시뮬레이션 SUMO 설치, vscode 설치 등의 환경 설정, 네트워크 생성, 통행 생성,시뮬레이션 실행, Openstreet map import를 다루는 한국어 튜토리얼">
 
-<title>13&nbsp; 많이 묻는 질문 – SUMO Tutorial</title>
+<title>5&nbsp; MAC 설치 – SUMO Tutorial</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -27,6 +27,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -37,8 +72,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./self_study.html" rel="next">
-<link href="./summary.html" rel="prev">
+<link href="./basic_example.html" rel="next">
+<link href="./install_sumo_in_window.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -48,7 +83,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-230a44b30ce500bbab2f63e108e88132.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-6f0e2c4b169066f7d5eee47bd7f97823.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -90,7 +125,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./asked.html"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">많이 묻는 질문</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./install.html">SUMO 환경 구성하기</a></li><li class="breadcrumb-item"><a href="./SUMO mac OS building.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">MAC 설치</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -156,7 +191,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./install_sumo_in_mac.html" class="sidebar-item-text sidebar-link">
+  <a href="./SUMO mac OS building.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">MAC 설치</span></span></a>
   </div>
 </li>
@@ -217,7 +252,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./asked.html" class="sidebar-item-text sidebar-link active">
+  <a href="./asked.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">많이 묻는 질문</span></span></a>
   </div>
 </li>
@@ -243,16 +278,21 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#커넥션-버튼" id="toc-커넥션-버튼" class="nav-link active" data-scroll-target="#커넥션-버튼"><span class="header-section-number">13.1</span> 커넥션 버튼</a></li>
+  <li><a href="#git-설치-homebrew-설치" id="toc-git-설치-homebrew-설치" class="nav-link active" data-scroll-target="#git-설치-homebrew-설치"><span class="header-section-number">5.0.1</span> git 설치, Homebrew 설치</a></li>
+  <li><a href="#first" id="toc-first" class="nav-link" data-scroll-target="#first"><span class="header-section-number">5.0.2</span> First</a></li>
+  <li><a href="#second" id="toc-second" class="nav-link" data-scroll-target="#second"><span class="header-section-number">5.1</span> second</a>
+  <ul class="collapse">
+  <li><a href="#hombrew-install-is-recommended" id="toc-hombrew-install-is-recommended" class="nav-link" data-scroll-target="#hombrew-install-is-recommended"><span class="header-section-number">5.1.1</span> Hombrew install is recommended</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./install.html">SUMO 환경 구성하기</a></li><li class="breadcrumb-item"><a href="./SUMO mac OS building.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">MAC 설치</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">많이 묻는 질문</span></h1>
+<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">MAC 설치</span></h1>
 </div>
 
 
@@ -269,12 +309,66 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="커넥션-버튼" class="level2" data-number="13.1">
-<h2 data-number="13.1" class="anchored" data-anchor-id="커넥션-버튼"><span class="header-section-number">13.1</span> 커넥션 버튼</h2>
-<p>편집 후 도로의 경우 Edge 사이에 흰 색 공백도 보여 도로가 제대로 연결되어 있는 것인지도 의아합니다.</p>
-<p><img src="image/page-1.png" class="img-fluid"> <img src="image/page-2.png" class="img-fluid"> <img src="image/page-3.png" class="img-fluid"></p>
+<p><a href="https://sumo.dlr.de/docs/Installing/MacOS_Build.html">sumo mac build</a> https://sumo.dlr.de/docs/Downloads.php#macos download sumo SUMO_HOME environment sumo lunchers download</p>
+<section id="git-설치-homebrew-설치" class="level3" data-number="5.0.1">
+<h3 data-number="5.0.1" class="anchored" data-anchor-id="git-설치-homebrew-설치"><span class="header-section-number">5.0.1</span> git 설치, Homebrew 설치</h3>
+<p>아래 블로그 링크 따라하기</p>
+<p><a href="https://velog.io/@wiseah/Git-%EC%84%A4%EC%B9%98-%EB%B0%8F-%ED%99%98%EA%B2%BD%EC%84%A4%EC%A0%95mac-os">wiseah 블로그</a></p>
+</section>
+<section id="first" class="level3" data-number="5.0.2">
+<h3 data-number="5.0.2" class="anchored" data-anchor-id="first"><span class="header-section-number">5.0.2</span> First</h3>
+<ol type="1">
+<li>Python 설치
+<ol type="1">
+<li>terminal</li>
+</ol>
+<pre><code>brew install python3       </code></pre></li>
+</ol>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> <span class="at">-V</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">vi</span> ~/.zshrc</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<pre class="vi"><code>alias python ="python3"
+esc + : wq</code></pre>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> ~/.zshrc</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>https://priming.tistory.com/154 https://jerryjerryjerry.tistory.com/90</p>
+<ol start="2" type="1">
+<li>XQuartz 설치
+<ol type="1">
+<li><a href="https://www.xquartz.org/">https://www.xquartz.org</a> 접속</li>
+<li>.dmg 파일 다운로드</li>
+<li>shift+우클릭 다운로드 파일 진행</li>
+<li>mac 로그아웃, 로그인</li>
+<li>Launchpad&gt; 기타</li>
+<li>$ ssh -X root@local IP sumo</li>
+</ol></li>
+</ol>
+<p>참고 : https://blog.naver.com/asa4209/222219869485 3. sumo-1.24.0.pkg 설치</p>
+</section>
+<section id="second" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="second"><span class="header-section-number">5.1</span> second</h2>
+<section id="hombrew-install-is-recommended" class="level3" data-number="5.1.1">
+<h3 data-number="5.1.1" class="anchored" data-anchor-id="hombrew-install-is-recommended"><span class="header-section-number">5.1.1</span> Hombrew install is recommended</h3>
+<ul>
+<li>terminal 켜기 <img src="image/Pasted image 20251103204710.png" class="img-fluid"></li>
+</ul>
+<p>termainal 순서대로 입력(복붙)</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">/bin/bash</span> <span class="at">-c</span> <span class="st">"</span><span class="va">$(</span><span class="ex">curl</span> <span class="at">-fsSL</span> https://raw.githubusercontent.com/Homebrew/install/master/install.sh<span class="va">)</span><span class="st">"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">brew</span> update</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">xcode-select</span> <span class="at">--install</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">clang</span> <span class="at">--version</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">brew</span> install cmake</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">brew</span> install <span class="at">--cask</span> xquartz</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="ex">brew</span> install xerces-c fox proj gdal gl2ps</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<pre class="brew"><code>brew install python ccache googletest fmt swig eigen apache-arrow pygobject3 gtk+3 adwaita-icon-theme python3 -m pip install texttest</code></pre>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone <span class="at">--recursive</span> https://github.com/eclipse-sumo/sumo </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">SUMO_HOME</span><span class="op">=</span><span class="st">"</span><span class="va">$PWD</span><span class="st">/sumo"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> <span class="va">$SUMO_HOME</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cmake</span> <span class="at">-B</span> build .</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> <span class="va">$SUMO_HOME</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cmake</span> <span class="at">--build</span> build <span class="at">--parallel</span> <span class="va">$(</span><span class="ex">sysctl</span> <span class="at">-n</span> hw.ncpu<span class="va">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Download SUMO lanchers</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -680,13 +774,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./summary.html" class="pagination-link" aria-label="요약">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">요약</span></span>
+      <a href="./install_sumo_in_window.html" class="pagination-link" aria-label="SUMO 설치 : 윈도우">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">SUMO 설치 : 윈도우</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./self_study.html" class="pagination-link" aria-label="SUMO 자습 자료">
-        <span class="nav-page-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">SUMO 자습 자료</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./basic_example.html" class="pagination-link" aria-label="SUMO 기초 실습">
+        <span class="nav-page-text">SUMO 기초 실습</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
