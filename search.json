@@ -63,22 +63,33 @@
     ]
   },
   {
-    "objectID": "install_python_in_window.html#sumo-콘다-파이썬-환경-만들기",
-    "href": "install_python_in_window.html#sumo-콘다-파이썬-환경-만들기",
-    "title": "3  Miniconda 설치 : 윈도우",
-    "section": "3.2 SUMO 콘다 파이썬 환경 만들기",
-    "text": "3.2 SUMO 콘다 파이썬 환경 만들기\n\ncmd 창 열기\nsumo 전용 conda 환경을 만들기 위해 아래 명령어 입력\n\n환경명 : sumopy\n파이썬 버전 : 3.11\n만약 파이썬 버전 3.11에서 sumo tool을 쓰는 데 문제가 생긴다면, 3.7버전의 새로운 환경을 만들어서 사용하시면 됩니다.\n\nconda create -n sumopy python=3.11\n\n명령어 입력하여 sumopy 활성화 하기\n\n아래 명령어 입력 후, 나오는 다음 명령줄 앞에 (sumopy)가 나오면 환경이 정상적으로 생성된 것입니다.\n\nconda activate sumopy\npython 버전 확인하기\n\n파이썬 버전이 나오면 환경에서 파이썬이 정상적으로 설치된 것입니다.\n\npython --version\n아래 명령어를 입력하여, sumo python tools에 필요한 패키지 설치\n\npython -m pip install -r \"%SUMO_HOME%\\tools\\requirements.txt\"\n\n\nsumopy를 활성화한 뒤에 sumo 관련 파이썬 코드를 사용하거나 관련 패키지를 설치하는 것이 좋습니다.",
-    "crumbs": [
-      "SUMO 환경 구성하기",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Miniconda 설치 : 윈도우</span>"
-    ]
-  },
-  {
     "objectID": "install_sumo_in_window.html",
     "href": "install_sumo_in_window.html",
     "title": "4  SUMO 설치 : 윈도우",
     "section": "",
-    "text": "4.1 sumo 환경변수 설정\n명령어 입력\n환경변수 설정 1. sumo bin path를 환경변수로 설정해야합니다. 2. SUMO Path 환경변수 설정하기 3. 내가 설치한 SUMO 폴더를 찾는다 4. SUMO 폴더에 들어간다 5. bin폴더에 들어간다. 6. 폴더 바탕에서 오른쪽 키를 클릭한다 7. 속성을 클릭한다 8. 보안탭에 들어간다 9. 개체 이름을 복사한다. 10. 복사한 값은 sumo bin 폴더의 path(주소)이다. 11. F:\\Program Files\\sumo\\bin(자기 sumo&gt;bin 폴더의 주소값) 12. 윈도우키&gt;설정&gt;시스템&gt;정보&gt;고급시스템 설정 &gt;고급 Tab clik 13. 환경변수 클릭 14. Path 클릭 15. 편집 클릭 16. 새로만들기 클릭 17. 복사한 주소값 넣기 18. 적용 19. cmd 켜기 20. 작동확인 21. 아래 그림에 나와있는대로 SUMO_HOME, Path에 sumo bin 구성되어 있는 지 확인 22. 안되면 sumo 삭제 후, 디폴트 상태로 재설치(환경변수 추가에 Check하여 설치) or 메일로 문의",
+    "text": "4.1 SUMO 콘다 파이썬 환경 설정하기\n명령어 입력",
+    "crumbs": [
+      "SUMO 환경 구성하기",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>SUMO 설치 : 윈도우</span>"
+    ]
+  },
+  {
+    "objectID": "install_sumo_in_window.html#sumo-콘다-파이썬-환경-설정하기",
+    "href": "install_sumo_in_window.html#sumo-콘다-파이썬-환경-설정하기",
+    "title": "4  SUMO 설치 : 윈도우",
+    "section": "",
+    "text": "cmd 창 열기\nsumo 전용 conda 환경을 만들기 위해 아래 명령어 입력\n\n환경명 : sumopy\n파이썬 버전 : 3.11\n만약 파이썬 버전 3.11에서 sumo tool을 쓰는 데 문제가 생긴다면, 3.7버전의 새로운 환경을 만들어서 사용하시면 됩니다.\n\n\nconda create -n sumopy python=3.11\n\n\n명령어 입력하여 sumopy 활성화 하기\n\n아래 명령어 입력 후, 나오는 다음 명령줄 앞에 (sumopy)가 나오면 환경이 정상적으로 생성된 것입니다.\n\nconda activate sumopy\npython 버전 확인하기\n\n파이썬 버전이 나오면 환경에서 파이썬이 정상적으로 설치된 것입니다.\n\npython --version\n아래 명령어를 입력하여, sumo python tools에 필요한 패키지 설치\n\npython -m pip install -r \"%SUMO_HOME%\\tools\\requirements.txt\"\n\n\nsumopy를 활성화한 뒤에 sumo 관련 파이썬 코드를 사용하거나 관련 패키지를 설치하는 것이 좋습니다.",
+    "crumbs": [
+      "SUMO 환경 구성하기",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>SUMO 설치 : 윈도우</span>"
+    ]
+  },
+  {
+    "objectID": "install_sumo_in_window.html#sumo-환경변수-설정",
+    "href": "install_sumo_in_window.html#sumo-환경변수-설정",
+    "title": "4  SUMO 설치 : 윈도우",
+    "section": "4.2 sumo 환경변수 설정",
+    "text": "4.2 sumo 환경변수 설정\n환경변수 설정은 아래의 두 명령어를 입력해서 반응이 없으면 수행합니다.\nsumo --version\necho %SUMO_HOME%\n\nsumo bin path를 환경변수로 설정해야합니다.\nSUMO Path 환경변수 설정하기\n내가 설치한 SUMO 폴더를 찾는다\nSUMO 폴더에 들어간다\nbin폴더에 들어간다.\n폴더 바탕에서 오른쪽 키를 클릭한다\n속성을 클릭한다\n보안탭에 들어간다\n개체 이름을 복사한다.\n복사한 값은 sumo bin 폴더의 path(주소)이다.\nF:\\Program Files\\sumo\\bin(자기 sumo&gt;bin 폴더의 주소값)\n윈도우키&gt;설정&gt;시스템&gt;정보&gt;고급시스템 설정 &gt;고급 Tab clik\n환경변수 클릭\nPath 클릭\n편집 클릭\n새로만들기 클릭\n복사한 주소값 넣기\n적용\ncmd 켜기\n작동확인\n아래 그림에 나와있는대로 SUMO_HOME, Path에 sumo bin 구성되어 있는 지 확인\n안되면 sumo 삭제 후, 디폴트 상태로 재설치(환경변수 추가에 Check하여 설치) or 메일로 문의",
     "crumbs": [
       "SUMO 환경 구성하기",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>SUMO 설치 : 윈도우</span>"

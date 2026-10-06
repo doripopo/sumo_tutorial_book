@@ -83,7 +83,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-230a44b30ce500bbab2f63e108e88132.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-6f0e2c4b169066f7d5eee47bd7f97823.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -278,7 +278,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#sumo-환경변수-설정" id="toc-sumo-환경변수-설정" class="nav-link active" data-scroll-target="#sumo-환경변수-설정"><span class="header-section-number">4.1</span> sumo 환경변수 설정</a></li>
+  <li><a href="#sumo-콘다-파이썬-환경-설정하기" id="toc-sumo-콘다-파이썬-환경-설정하기" class="nav-link active" data-scroll-target="#sumo-콘다-파이썬-환경-설정하기"><span class="header-section-number">4.1</span> SUMO 콘다 파이썬 환경 설정하기</a></li>
+  <li><a href="#sumo-환경변수-설정" id="toc-sumo-환경변수-설정" class="nav-link" data-scroll-target="#sumo-환경변수-설정"><span class="header-section-number">4.2</span> sumo 환경변수 설정</a></li>
   </ul>
 </nav>
     </div>
@@ -317,9 +318,69 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>명령어 입력</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode cmd code-with-copy"><code class="sourceCode dosbat"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>sumo -<span class="at">-version</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><img src="image/install_window_down7.jpeg" class="img-fluid"></p>
-<section id="sumo-환경변수-설정" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="sumo-환경변수-설정"><span class="header-section-number">4.1</span> sumo 환경변수 설정</h2>
-<p>환경변수 설정 1. sumo bin path를 환경변수로 설정해야합니다. 2. SUMO Path 환경변수 설정하기 3. 내가 설치한 SUMO 폴더를 찾는다 4. SUMO 폴더에 들어간다 5. bin폴더에 들어간다. 6. 폴더 바탕에서 오른쪽 키를 클릭한다 7. 속성을 클릭한다 8. 보안탭에 들어간다 9. 개체 이름을 복사한다. 10. 복사한 값은 sumo bin 폴더의 path(주소)이다. 11. <code>F:\Program Files\sumo\bin</code>(자기 sumo&gt;bin 폴더의 주소값) 12. 윈도우키&gt;설정&gt;시스템&gt;정보&gt;고급시스템 설정 &gt;고급 Tab clik 13. 환경변수 클릭 14. Path 클릭 15. 편집 클릭 16. 새로만들기 클릭 17. 복사한 주소값 넣기 18. 적용 19. cmd 켜기 20. 작동확인 21. 아래 그림에 나와있는대로 SUMO_HOME, Path에 sumo bin 구성되어 있는 지 확인 22. 안되면 sumo 삭제 후, 디폴트 상태로 재설치(환경변수 추가에 Check하여 설치) or 메일로 문의</p>
+<hr>
+<section id="sumo-콘다-파이썬-환경-설정하기" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="sumo-콘다-파이썬-환경-설정하기"><span class="header-section-number">4.1</span> SUMO 콘다 파이썬 환경 설정하기</h2>
+<ol type="1">
+<li><p>cmd 창 열기</p></li>
+<li><p>sumo 전용 conda 환경을 만들기 위해 아래 명령어 입력</p>
+<ul>
+<li>환경명 : sumopy</li>
+<li>파이썬 버전 : 3.11</li>
+<li>만약 파이썬 버전 3.11에서 sumo tool을 쓰는 데 문제가 생긴다면, 3.7버전의 새로운 환경을 만들어서 사용하시면 됩니다.</li>
+</ul></li>
+</ol>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode cmd code-with-copy"><code class="sourceCode dosbat"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>conda create <span class="at">-n</span> sumopy python=3.11</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><img src="image/install_miniconda_4.png" class="img-fluid"></p>
+<ol start="3" type="1">
+<li>명령어 입력하여 sumopy 활성화 하기
+<ul>
+<li>아래 명령어 입력 후, 나오는 다음 명령줄 앞에 (sumopy)가 나오면 환경이 정상적으로 생성된 것입니다.</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode cmd code-with-copy"><code class="sourceCode dosbat"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>conda activate sumopy</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<li>python 버전 확인하기
+<ul>
+<li>파이썬 버전이 나오면 환경에서 파이썬이 정상적으로 설치된 것입니다.</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode cmd code-with-copy"><code class="sourceCode dosbat"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>python -<span class="at">-version</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<li>아래 명령어를 입력하여, sumo python tools에 필요한 패키지 설치</li>
+</ol>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode cmd code-with-copy"><code class="sourceCode dosbat"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>python <span class="at">-m</span> pip install <span class="at">-r</span> <span class="st">"</span><span class="pp">%</span><span class="va">SUMO_HOME</span><span class="pp">%</span><span class="st">\tools\requirements.txt"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><img src="image/install_miniconda_6.jpeg" class="img-fluid"></p>
+<ol start="6" type="1">
+<li>sumopy를 활성화한 뒤에 sumo 관련 파이썬 코드를 사용하거나 관련 패키지를 설치하는 것이 좋습니다.</li>
+</ol>
+<hr>
+</section>
+<section id="sumo-환경변수-설정" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="sumo-환경변수-설정"><span class="header-section-number">4.2</span> sumo 환경변수 설정</h2>
+<p>환경변수 설정은 아래의 두 명령어를 입력해서 반응이 없으면 수행합니다.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode cmd code-with-copy"><code class="sourceCode dosbat"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>sumo -<span class="at">-version</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode cmd code-with-copy"><code class="sourceCode dosbat"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="pp">%</span><span class="va">SUMO_HOME</span><span class="pp">%</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ol type="1">
+<li>sumo bin path를 환경변수로 설정해야합니다.</li>
+<li>SUMO Path 환경변수 설정하기</li>
+<li>내가 설치한 SUMO 폴더를 찾는다</li>
+<li>SUMO 폴더에 들어간다</li>
+<li>bin폴더에 들어간다.</li>
+<li>폴더 바탕에서 오른쪽 키를 클릭한다</li>
+<li>속성을 클릭한다</li>
+<li>보안탭에 들어간다</li>
+<li>개체 이름을 복사한다.</li>
+<li>복사한 값은 sumo bin 폴더의 path(주소)이다.</li>
+<li><code>F:\Program Files\sumo\bin</code>(자기 sumo&gt;bin 폴더의 주소값)</li>
+<li>윈도우키&gt;설정&gt;시스템&gt;정보&gt;고급시스템 설정 &gt;고급 Tab clik</li>
+<li>환경변수 클릭</li>
+<li>Path 클릭</li>
+<li>편집 클릭</li>
+<li>새로만들기 클릭</li>
+<li>복사한 주소값 넣기</li>
+<li>적용</li>
+<li>cmd 켜기</li>
+<li>작동확인</li>
+<li>아래 그림에 나와있는대로 SUMO_HOME, Path에 sumo bin 구성되어 있는 지 확인</li>
+<li>안되면 sumo 삭제 후, 디폴트 상태로 재설치(환경변수 추가에 Check하여 설치) or 메일로 문의</li>
+</ol>
 <p><img src="image/page-09.png" class="img-fluid"></p>
 
 
