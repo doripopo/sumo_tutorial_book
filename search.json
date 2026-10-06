@@ -78,7 +78,7 @@
     "href": "install_sumo_in_window.html",
     "title": "4  SUMO 설치 : 윈도우",
     "section": "",
-    "text": "4.1 sumo 환경변수 설정\n명령어 입력\n환경변수 설정 1. sumo bin path를 환경변수로 설정해야합니다. 2. SUMO Path 환경변수 설정하기 3.내가 설치한 SUMO 폴더를 찾는다 4.SUMO 폴더에 들어간다 5.bin폴더에 들어간다. 6.폴더 바탕에서 오른쪽 키를 클릭한다 7.속성을 클릭한다 8.보안탭에 들어간다 9.개체 이름을 복사한다. 10. 복사한 값은 sumo bin 폴더의 path(주소)이다. 11. F:\\Program Files\\sumo\\bin(자기 sumo&gt;bin 폴더의 주소값) 12. 윈도우키&gt;설정&gt;시스템&gt;정보&gt;고급시스템 설정 &gt;고급 Tab clik 1. 환경변수 클릭 2. Path 클릭 3. 편집 클릭 4. 새로만들기 클릭 5. 복사한 주소값 넣기 6. 적용 7. cmd 켜기 8. 작동확인 9. ppt에 나와있는대로 SUMO_HOME, Path에 sumo bin 구성되어 있는 지 확인 10. 안되면 sumo 삭제 후, 디폴트 상태로 재설치(환경변수 추가에 Check하여 설치) or 메일로 문의",
+    "text": "4.1 sumo 환경변수 설정\n명령어 입력\n환경변수 설정 1. sumo bin path를 환경변수로 설정해야합니다. 2. SUMO Path 환경변수 설정하기 3. 내가 설치한 SUMO 폴더를 찾는다 4. SUMO 폴더에 들어간다 5. bin폴더에 들어간다. 6. 폴더 바탕에서 오른쪽 키를 클릭한다 7. 속성을 클릭한다 8. 보안탭에 들어간다 9. 개체 이름을 복사한다. 10. 복사한 값은 sumo bin 폴더의 path(주소)이다. 11. F:\\Program Files\\sumo\\bin(자기 sumo&gt;bin 폴더의 주소값) 12. 윈도우키&gt;설정&gt;시스템&gt;정보&gt;고급시스템 설정 &gt;고급 Tab clik 13. 환경변수 클릭 14. Path 클릭 15. 편집 클릭 16. 새로만들기 클릭 17. 복사한 주소값 넣기 18. 적용 19. cmd 켜기 20. 작동확인 21. 아래 그림에 나와있는대로 SUMO_HOME, Path에 sumo bin 구성되어 있는 지 확인 22. 안되면 sumo 삭제 후, 디폴트 상태로 재설치(환경변수 추가에 Check하여 설치) or 메일로 문의",
     "crumbs": [
       "SUMO 환경 구성하기",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>SUMO 설치 : 윈도우</span>"
