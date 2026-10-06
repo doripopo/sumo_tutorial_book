@@ -8,7 +8,7 @@
 
 <meta name="description" content="교통 시뮬레이션 SUMO 설치, vscode 설치 등의 환경 설정, 네트워크 생성, 통행 생성,시뮬레이션 실행, Openstreet map import를 다루는 한국어 튜토리얼">
 
-<title>9&nbsp; 시뮬레이션 하기 – SUMO Tutorial</title>
+<title>10&nbsp; 시뮬레이션 하기 – SUMO Tutorial</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -125,7 +125,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./basic_example.html">SUMO 기초 실습</a></li><li class="breadcrumb-item"><a href="./basic_simulation.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">시뮬레이션 하기</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./basic_example.html">SUMO 기초 실습</a></li><li class="breadcrumb-item"><a href="./basic_simulation.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">시뮬레이션 하기</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -195,6 +195,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">MAC 설치</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./install_sumo_in_mac_2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">mac에서 sumo, vscode, python 설치 방법 2</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -209,31 +215,31 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./basic_net_generate.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Network 그리기</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Network 그리기</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./basic_net_traffic_sign.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">신호 입력하기</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">신호 입력하기</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./basic_trip_generate.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">교통 수요 생성</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">교통 수요 생성</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./basic_simulation.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">시뮬레이션 하기</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">시뮬레이션 하기</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./basic_output.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">결과 파일 해석</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">결과 파일 해석</span></span></a>
   </div>
 </li>
       </ul>
@@ -241,31 +247,31 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./openstreet_map_import.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">OSM Network import</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">OSM Network import</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./summary.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">요약</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">요약</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./asked.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">많이 묻는 질문</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">많이 묻는 질문</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./self_study.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">SUMO 자습 자료</span></span></a>
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">SUMO 자습 자료</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./qna_method.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">이메일 문의</span></span></a>
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">이메일 문의</span></span></a>
   </div>
 </li>
     </ul>
@@ -278,16 +284,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#sumo-configuration-정의하기" id="toc-sumo-configuration-정의하기" class="nav-link active" data-scroll-target="#sumo-configuration-정의하기"><span class="header-section-number">9.1</span> sumo configuration 정의하기</a></li>
+  <li><a href="#sumo-configuration-정의하기" id="toc-sumo-configuration-정의하기" class="nav-link active" data-scroll-target="#sumo-configuration-정의하기"><span class="header-section-number">10.1</span> sumo configuration 정의하기</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./basic_example.html">SUMO 기초 실습</a></li><li class="breadcrumb-item"><a href="./basic_simulation.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">시뮬레이션 하기</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./basic_example.html">SUMO 기초 실습</a></li><li class="breadcrumb-item"><a href="./basic_simulation.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">시뮬레이션 하기</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">시뮬레이션 하기</span></h1>
+<h1 class="title"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">시뮬레이션 하기</span></h1>
 </div>
 
 
@@ -305,8 +311,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <p>네트워크와 교통 수요를 만들었으니, 이제 시뮬레이션을 하면 됩니다. sumo는 시뮬레이션 엔진 프로그램입니다. sumo를 동작하려면 어떤 네트워크 파일과 교통 수요 파일을 사용할 것인지 정의해줘야합니다. 이또한 od2trips와 duarouter처럼, sumo_configuration 파일로 정의할 수 있습니다. 또한, 시뮬레이션 이후에 결과 파일을 무엇을 받을지도 정의할 수 있습니다.</p>
-<section id="sumo-configuration-정의하기" class="level2" data-number="9.1">
-<h2 data-number="9.1" class="anchored" data-anchor-id="sumo-configuration-정의하기"><span class="header-section-number">9.1</span> sumo configuration 정의하기</h2>
+<section id="sumo-configuration-정의하기" class="level2" data-number="10.1">
+<h2 data-number="10.1" class="anchored" data-anchor-id="sumo-configuration-정의하기"><span class="header-section-number">10.1</span> sumo configuration 정의하기</h2>
 <ol type="1">
 <li><p>vs code 열기 &gt; 새파일 &gt; 파일명 <code>basic_sumo_config.sumocfg</code> 입력, 확장자 sumocfg여야 합니당!</p></li>
 <li><p>파일에 아래 내용 입력</p></li>
@@ -749,12 +755,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./basic_trip_generate.html" class="pagination-link" aria-label="교통 수요 생성">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">교통 수요 생성</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">교통 수요 생성</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./basic_output.html" class="pagination-link" aria-label="결과 파일 해석">
-        <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">결과 파일 해석</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">결과 파일 해석</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
