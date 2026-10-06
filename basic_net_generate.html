@@ -6,6 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="description" content="교통 시뮬레이션 SUMO 설치, vscode 설치 등의 환경 설정, 네트워크 생성, 통행 생성,시뮬레이션 실행, Openstreet map import를 다루는 한국어 튜토리얼">
 
 <title>6&nbsp; Network 그리기 – SUMO Tutorial</title>
 <style>
@@ -75,6 +76,7 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<meta name="google-site-verification" content="arImcSlaNZbWgw2eYA1E2jfx3v832cNYq2x_56bAmC0">
 
 
 </head>
@@ -361,7 +363,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/doripopo\.github\.io\/sumo_tutorial_book\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
